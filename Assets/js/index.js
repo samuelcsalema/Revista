@@ -1,8 +1,16 @@
 let msgError = document.querySelector('#msgError'); // Mensagem de erro
-token = false;
 let censura = document.querySelector('.censura');
+let token = false
 let colunalado = document.querySelector('.coluna-lado');
 let burgao = document.querySelector('.burgao');
+
+//if(localStorage.getItem('token') == null){
+//  alert('Você precisa estar logado para acessar essa página')
+//  window.location.href = './Assets/html/signin.html'
+//}
+
+let userLogado = JSON.parse(localStorage.getItem('userLogado')) 
+let logado = document.querySelector('#logado')
 
 document.addEventListener("DOMContentLoaded", () => {
     const mainContent = document.getElementById("main-content");
@@ -195,11 +203,13 @@ document.getElementById("btn-pago").addEventListener("click", (event) => {
     event.preventDefault();
     if (token == true) {
         hideError(); // Esconde a mensagem de erro
+        menu(); // Chama a função menu para mostrar a censura e a coluna ao lado
         mainContent.innerHTML = content.pago;
     } else {
         msgError.classList.remove('hidden');
         msgError.innerHTML = '<strong> Você precisa estar logado para acessar essa área </strong>' // Mensagem de erro
         mainContent.innerHTML = content.error;
+        menu(); // Chama a função menu para mostrar a censura e a coluna ao lado
     }
 });
 });
@@ -244,3 +254,12 @@ function menu() {
     colunalado.classList.toggle('hidden');
     burgao.classList.toggle('fixed');
 }
+
+//function sair(){
+  // Remove o token e os dados do usuário logado do localStorage
+//  localStorage.removeItem('token')
+  // Remove o usuário logado do localStorage
+//  localStorage.removeItem('userLogado')
+  // Redireciona para a página de login
+//  window.location.href = '../html/signin.html'
+//}
