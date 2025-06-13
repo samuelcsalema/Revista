@@ -252,7 +252,7 @@ button:hover {
     position: fixed; /* Posicionando a coluna lateral */
     z-index: 1001;
     background-color: #cee0f7;
-    width: 17vw;
+    width: 13vw;
     height: 100vh; /* Altura da coluna lateral */
     max-width: 320px;
     min-width: 10vh; /* Largura mínima da coluna lateral */
@@ -296,6 +296,15 @@ nav ul li:hover {
     transition: background-color 0.5s ease;
     transform: scale(1.15);
     z-index: 10; /* Bring to front on hover */
+}
+#espaco-vazio {
+    height: 40px;
+    min-height: 32px;
+    background: none;
+    border: none;
+    pointer-events: none;
+    margin: 0;
+    padding: 0;
 }
 /* Erro para parte paga */
 #msgError{
