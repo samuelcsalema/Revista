@@ -63,6 +63,7 @@
     .btn-login, .btn-register, .btn-search {
         width: auto; /* Remove width: 100% */
     }
+
 }
 
 html, body {
@@ -248,16 +249,18 @@ button:hover {
 }
 /* Botões */
 .coluna-lado {
+    position: fixed; /* Posicionando a coluna lateral */
+    z-index: 1001;
     background-color: #cee0f7;
-    width: 200px;
-    transform: translateX(-100%); /* Escondendo a coluna lateral */
-    z-index: 1100; /* Colocando em cima de tudo */
+    width: 17vw;
+    height: 100vh; /* Altura da coluna lateral */
+    max-width: 320px;
     min-width: 10vh; /* Largura mínima da coluna lateral */
     min-height: 100vh; /* Altura mínima da coluna lateral */
-    margin-left: 200px; /* Espaçamento entre a coluna lateral e o conteúdo */
-    position: fixed; /* Posicionando a coluna lateral */
+    transition: transform 0.3s ease;
+    transform: translateX(-100%); /* Escondendo a coluna lateral */
 }
-#coluna-lado.active {
+.coluna-lado.active {
     transform: translateX(0);
 }
 .coluna-lado,

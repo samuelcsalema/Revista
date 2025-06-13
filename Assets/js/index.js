@@ -216,7 +216,7 @@ document.getElementById("btn-pago").addEventListener("click", (event) => {
 
 document.getElementById("id-censura").addEventListener("click", () => {
     censura.classList.add('hidden');
-    colunalado.classList.add('hidden');
+    colunalado.classList.remove('active');
     burgao.classList.remove('fixed');
 });
 
@@ -253,7 +253,7 @@ function menu() {
     let censura = document.querySelector('.censura');
     let colunalado = document.querySelector('.coluna-lado');
     censura.classList.toggle('hidden');
-    colunalado.classList.toggle('hidden');
+    colunalado.classList.toggle('active');
     burgao.classList.toggle('fixed');
 }
 
