@@ -220,17 +220,7 @@ document.getElementById("id-censura").addEventListener("click", () => {
     burgao.classList.remove('fixed');
 });
 
-document.querySelectorAll('.coluna-lado nav ul li a').forEach(link => {
-    link.addEventListener('click', () => {
-        document.querySelector('.censura').classList.add('hidden');
-        document.querySelector('.coluna-lado').classList.remove('active');
-        document.querySelector('.burgao').classList.remove('fixed');
-        link.blur();
-    });
-});
-
 document.addEventListener("DOMContentLoaded", () => {
-
     document.getElementById("btn-search").addEventListener("click", function() {
         const searchTerm = document.getElementById("searchInput").value.trim();
         if (searchTerm) {
@@ -238,8 +228,7 @@ document.addEventListener("DOMContentLoaded", () => {
             // Aqui você pode chamar sua função de busca real
         }
     });
-
-    // Opcional: permitir Enter para pesquisar
+    // Enter para pesquisar
     document.getElementById("searchInput").addEventListener("keydown", function(event) {
         if (event.key === "Enter") {
             document.getElementById("btn-search").click();
@@ -259,8 +248,6 @@ function register() {
 }
 
 function menu() {
-    let censura = document.querySelector('.censura');
-    let colunalado = document.querySelector('.coluna-lado');
     censura.classList.toggle('hidden');
     colunalado.classList.toggle('active');
     burgao.classList.toggle('fixed');

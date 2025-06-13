@@ -4,7 +4,7 @@
     margin: 0;
 }
 
-@media (hover: none) and (pointer: coarse) and (max-width: 600px) {
+@media (max-width: 600px) {
     .container, .content, section {
         width: 100% !important;
         max-width: 100vw !important;
@@ -31,14 +31,19 @@
         height: 20px;
     }
     .coluna-lado {
-        width: 70vw !important;
+        width: 50vw !important;
         min-width: 0 !important;
         margin-left: 0 !important;
+        transition: transform 0.3s ease !important; /* Transição suave ao abrir e fechar */
         min-height: 100vh;
     }
     nav ul li {
         padding: 14px 8px;
         font-size: 1em;
+    }
+    nav ul li a:focus {
+        outline: none !important;
+        box-shadow: none !important;
     }
     .btn-login, .btn-register, .btn-search {
         font-size: 12pt !important;
@@ -56,7 +61,7 @@
         font-size: 16pt !important;
     }
     .botoes {
-        flex-direction: column !important; /* Change from column to row */
+        flex-direction: row !important; /* Change from column to row */
         gap: 8px !important;
         padding: 8px !important;
     }
@@ -136,7 +141,6 @@ header {
     display: flex;
     align-items: center;
     gap: 10px;
-    background-color: #f7f4ed;
     padding: 4px; /* Alinhando com o burgão */
     margin-left: auto;
 }
@@ -149,7 +153,6 @@ header {
     font-weight: bold; /* Deixando o texto em negrito */
     font-size: 8pt; /* Tamanho do texto */
     margin-top: 0.3%; /* Espaçamento entre o botão e a barra de escrever */
-    margin-left: 96%;
     border-radius: 8px; /* Arredondando o botão */
     cursor: pointer; /* Fazendo com que o mouse mude quando passa em cima do botão */
     outline: none; /* Retirando o contorno do botão */
@@ -237,7 +240,7 @@ button:hover {
     justify-content: center; /* Centralizando a área de texto */
 }
 .cabecalho-vazio {
-    min-width: 220px; /* Same as .pesquisa for perfect centering */
+    min-width: 220px; /* Ajuda a centralizar o nome */
 }
 /* Fundo */
 .censura {
@@ -254,12 +257,12 @@ button:hover {
     position: fixed; /* Posicionando a coluna lateral */
     z-index: 1001;
     background-color: #cee0f7;
-    width: 13vw;
+    width: 20vw;
     height: 100vh; /* Altura da coluna lateral */
     max-width: 320px;
     min-width: 10vh; /* Largura mínima da coluna lateral */
     min-height: 100vh; /* Altura mínima da coluna lateral */
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease; /* Transição suave ao abrir e fechar */
     transform: translateX(-100%); /* Escondendo a coluna lateral */
 }
 .coluna-lado.active {
@@ -268,7 +271,7 @@ button:hover {
 .coluna-lado,
 nav ul,
 nav ul li {
-    background-color: #cee0f7 !important;
+    background-color: #cee0f7;
 }
 nav ul {
     list-style: none;
