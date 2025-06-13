@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--- Trazendo a imagem do olho --->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--- Trazendo o CSS --->
+    <link rel="stylesheet" href="../css/signup.css">
+    <title> Sign-Up </title>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+<!--- Entrando --->
+            <h1> Cadastrar </h1>
+            <!--- Resultado --->
+            <div id="msgError" ></div>
+            <div id="msgSucess" ></div>
+<!--- Login --->
+            <!--- Nome --->
+            <div class="label-float">
+                <input type="text" id="nome" placeholder=""required>
+                <label id="labelnome" for="nome"> Nome </label>
+            </div>
+            <!--- Usuário --->
+            <div class="label-float">
+                <input type="text" id="usuario" placeholder=""required>
+                <label id="labelusuario" for="usuario"> Usuário </label>
+            </div>
+            <!--- Idade --->
+            <div class="label-float">
+                <input type = "number" id = "idade" name = "idade" min="0" max="120" placeholder="" required>
+                <label id="labelidade" for = "idade"> Idade </label>
+            </div>
+            <!--- Email --->
+            <div class="label-float">
+                <input type="email" id="email" name="email" placeholder="" required>
+                <label id="labelemail" for="email"> Email </label>
+            </div>
+            <!--- Gênero --->
+            <div class="genero">
+                <label id="labelgenero" aria-required> Gênero: </label>
+                <input type = "radio" id = "homem" name = "genero" value="Masculino">
+                <label id="labelhomem" for = "homem"> Masculino </label>
+                <input type = "radio" id = "mulher" name = "genero" value="Feminino">
+                <label id="labelmulher" for = "mulher"> Feminino </label>
+                <input type = "radio" id = "outro" name = "genero" value="Outro">
+                <label id="labeloutro" for = "outro"> Outro </label>
+            </div>
+            <!--- Senha --->
+            <div class="label-float">
+                <input type="password" id="senha" placeholder=" " required>
+                <label id="labelsenha" for="senha"> Senha </label>
+                <i id="verSenha" class="fa fa-eye" aria-hidden="true"></i>
+            </div>
+            <!--- Confirmar Senha --->
+            <div class="label-float">
+                <input type="password" id="confsenha" placeholder=" " required>
+                <label id="labelconfsenha" for="confsenha"> Confirmar Senha </label>
+                <i id="verConfirmSenha" class="fa fa-eye" aria-hidden="true"></i>
+            </div>
+            <!--- Requisitos para a senha --->
+            <div id="requisitos_senha">
+                <ul>
+                    <li id="caracteres"> A senha deve conter ao menos 8 caracteres </li>
+                    <li id="minuscula"> A senha deve conter ao menos uma letra minúscula </li>
+                    <li id="maiuscula"> A senha deve conter ao menos uma letra maiúscula </li>
+                    <li id="numero"> A senha deve conter ao menos um número </li>
+                    <li id="especial"> A senha deve conter ao menos um símbolo </li>
+                    <li id="confirmar"> Confirmar Senha: As senhas não conferem </li>
+                </ul>
+            </div>
+            <!--- Cadastrar --->
+            <div class="justify-center">
+                <button onclick="cadastrar()"> Cadastrar </button>
+            </div>
+        </div>
+        </div>
+        <!--- Ligando ao JavaScript --->
+        <script src="../js/signup.js"> </script>
+</body>
+</html>
+
+</body>
+</html>

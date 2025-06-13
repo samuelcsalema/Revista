@@ -1,0 +1,187 @@
+/* Importando a fonte do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Formatando */
+* {
+    margin: 0; /* Retirando a margem */
+    padding: 0; /* Retirando o espaçamento */
+    font-family: 'Roboto', sans-serif; /* Definindo a fonte */
+}
+/* Wallpaper */
+body {
+    background-color: #08264d; /* Cor de fundo */ /*ffffff branco. f7f4ed lace. e8d9ed Petal */
+    background-repeat: no-repeat; /* Não repetir a imagem */
+    background-size: cover; /* Cobrir toda a tela */
+    background-attachment: fixed; /* Manter o fundo fixo */
+    font-family: 'Roboto', sans-serif; /* Definindo a fonte */
+    margin: 0; /* Retirando a margem */
+    padding: 0; /* Retirando o espaçamento */
+}
+/* Tratando o Entrar */
+.container {
+    display: flex; /* Fazendo com que fique em linha */
+    justify-content: center; /* Centralizando a área de Cadastro */
+    width: 100%; /* Largura da área de Cadastro */
+    margin-top: 100px; /* Espaçamento entre o topo e a área de Cadastro */
+}
+/* Fundo da área de Cadastro */
+.card {
+    background-color: #e9f3ff; /* Cor de fundo da área de Cadastro */
+    padding: 30px; /* Espaçamento entre o fundo e a barra de escrever */
+    border-radius: 4%; /* Arredondando o fundo */
+    box-shadow: 4px 3px 1px 0px #ffffff60; /* Sombras do fundo */
+}
+/* Head do site */
+h1 {
+    text-align: center; /* Centralizando o título */
+    margin-bottom: 20px; /* Espaçamento entre o título e a barra de escrever */
+    color: #0b1957; /* Cor do texto */
+}
+
+/* Área de digitar Requisitos */
+.label-float input {
+    width: 100%; /* Largura da barra de escrever */
+    padding: 5px 5px; /* Tamanho da linha de escrever */
+    display: inline-block; /* Faz com que fique em linha */
+    border: 0; /* Retirando a borda */
+    border-bottom: 2px solid #0b1957; /* Cor da linha de escrever */
+    background-color: transparent; /* Cor de fundo da linha de escrever */
+    outline: none; /* Retirando o contorno */
+    min-width: 330px; /* Largura mínima da linha de escrever */
+    font-size: 16px; /* Tamanho da fonte */
+    transition: all .3s ease; /* Velocidade que configura */
+    border-radius: 5px; /* Arredondando o fundo */
+}
+
+ .genero input {
+    padding: 5px 5px; /* Tamanho da linha de escrever */
+    display: inline-block; /* Faz com que fique em linha */
+    border: 0; /* Retirando a borda */
+    border-bottom: 2px solid #0b1957; /* Cor da linha de escrever */
+    background-color: transparent; /* Cor de fundo da linha de escrever */
+    outline: none; /* Retirando o contorno */
+    font-size: 16px; /* Tamanho da fonte */
+    transition: all .3s ease; /* Velocidade que configura */
+    border-radius: 0; /* Retirando o arredondado */
+}
+
+.genero label {
+    color:#0b1957; /* Cor do texto */
+    transition: color .3s ease; /* Velocidade que configura */
+}
+
+.genero input[type="radio"] {
+    margin-right: 5px; /* Espaçamento entre o texto e a barra de escrever */
+}
+
+/* Texto de Requisitos */
+.label-float {
+    position: relative; /* Fazendo com que fique em linha */
+    padding-top: 13px; /* Espaçamento entre o texto e a barra de escrever */
+    margin-top: 5%; /* Espaçamento entre o título e a barra de escrever */
+    margin-bottom: 5%; /* Espaçamento entre a barra de escrever e o botão */
+}
+/* */
+.label-float input:focus{
+    border-bottom: 2px solid #0b1957; /* Cor da linha de escrever ao clicar */
+}
+
+/* Como Requisitos irão se comportar */
+.label-float label {
+    color: #0b1957; /* Cor do texto */
+    pointer-events: none; /* Faz com que não clique no texto */
+    position: absolute; /* Fazendo com que fique em linha */
+    top: 0; /* Espaçamento entre o texto e a barra de escrever */
+    left: 0; /* Espaçamento entre o texto e a barra de escrever */
+    margin-top: 13px; /* Espaçamento entre o texto e a barra de escrever */
+    transition: all .3s ease; /* Velocidade que configura */
+}
+/* Especificações do Requisitos ao clicar */
+.label-float input:focus + label,
+.label-float input:valid + label {
+    font-size: 13px; /* Tamanho do texto */
+    margin-top: 0; /* Espaçamento entre o texto e a barra de escrever */
+    color: solid #0b1957; /* Cor do texto */
+}
+.label-float input:focus + label,
+.label-float input:not(:placeholder-shown) + label {
+    top: -10px; /* Espaçamento entre o texto e a barra de escrever */
+    font-size: 12px; /* Tamanho do texto */
+    color: solid #0b1957; /* Cor do texto */
+}
+/* Configurando o botão */
+button {
+    background-color: transparent; /* Cor de fundo do botão */
+    border-color: #0b1957; /* Cor da borda do botão */
+    color: #0b1957; /* Cor do texto do botão */
+    padding: 7px; /* Tamanho do botão */
+    font-weight: bold; /* Deixando o texto em negrito */
+    font-size: 12pt; /* Tamanho do texto */
+    margin-top: 20px; /* Espaçamento entre o botão e a barra de escrever */
+    border-radius: 4px; /* Arredondando o botão */
+    cursor: pointer; /* Fazendo com que o mouse mude quando passa em cima do botão */
+    outline: none; /* Retirando o contorno do botão */
+    transition: all .5 ease; /* Fazendo com que fique mais claro quando clica */
+}
+
+/* Configurando quando passa no botão*/
+button:hover {
+    background-color: #0b1957; /* Cor de fundo do botão ao passar */
+    color: #d2b3db; /* Cor de fundo do botão ao clicar */
+}
+/* Centralizando o botão*/
+.justify-center {
+    display: flex; /* Fazendo com que fique em linha */
+    justify-content: center; /* Centralizando o botão */
+}
+/* Escondendo a área de requisitos da senha*/
+#requisitos_senha {
+    display: none; /* Retirando a área de requisitos */
+    margin-top: 7px; /* Espaçamento entre o botão e a área de requisitos */
+}
+/* Mostrando a área de requisitos da senha*/
+#requisitos_senha.visible {
+    display: block; /* Mostrando a área de requisitos */
+    margin-top: 7px; /* Espaçamento entre o botão e a área de requisitos */
+}
+/* Configurando a área de requisitos da senha*/
+#requisitos_senha ul {
+        list-style: none; /* Retirando os pontos da lista */
+        padding: 7px; /* Espaçamento entre a área de requisitos e a barra de escrever */
+}
+/* Configurando a área de requisitos da senha*/
+#requisitos_senha li {
+        color: rgb(255, 0, 0); /* Cor do texto */
+        font-size: 12px; /* Tamanho do texto */
+        font-weight: bold; /* Deixando o texto em negrito */
+}
+/* Configurando a área de requisitos da senha*/
+#requisitos_senha .valid {
+    color: rgb(0, 255, 0); /* Cor do texto */
+    font-size: 10px; /* Tamanho do texto */
+}
+/* Configurando a área de requisitos da senha*/
+#password-requirements .invalid {
+    color: rgb(255, 0, 0); /* Cor do texto */
+    font-size: 12px; /* Tamanho do texto */
+}
+/* Olhar ou esconder senha */
+.fa-eye {
+    position: absolute; /* Fazendo com que fique em linha */
+    top: 20px; /* Espaçamento entre o olho e a barra de escrever */
+    right: 10px; /* Espaçamento entre o olho e a barra de escrever */
+    cursor: pointer; /* Fazendo com que o mouse mude quando passa em cima do olho */
+    color: #0b1957; /* Cor do olho */
+}
+/* Mensagem de erro */
+#msgError{
+    text-align: center; /* Centralizando o texto */
+    color: #ff0000; /* Cor do texto */
+    background-color: transparent; /* Cor de fundo da mensagem de erro */
+}
+/* Mensagem de sucesso */
+#msgSucess{
+    text-align: center; /* Centralizando o texto */
+    color: #00bb00; /* Cor do texto */
+    background-color: transparent; /* Cor de fundo da mensagem de sucesso */
+}

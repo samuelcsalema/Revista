@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--- Trazendo o CSS --->
+    <link rel="stylesheet" href="./Assets/css/index.css">
+    <title> Viva Letras </title>
+</head>
+    <div id="id-censura" class="censura hidden"></div>
+    <div class="coluna-lado hidden">
+        <nav>
+            <ul>
+                <li id="btn-home"><a href="#home"> Home </a></li>
+                <li id="btn-caderno1"><a href="#caderno1"> Caderno 1 </a></li>
+                <li id="btn-caderno2"><a href="#caderno2"> Caderno 2 </a></li>
+                <li id="btn-caderno3"><a href="#caderno3"> Caderno 3 </a></li>
+                <li id="btn-caderno4"><a href="#caderno4"> Educação Especial </a></li>
+                <li id="btn-caderno5"><a href="#caderno5"> Caderno 5 </a></li>
+                <li id="btn-caderno6"><a href="#caderno6"> Caderno 6 </a></li>
+                <li id="btn-caderno7"><a href="#caderno7"> Caderno 7 </a></li>
+                <li id="btn-caderno8"><a href="#caderno8"> Caderno 8 </a></li>
+                <li id="btn-sobre"><a href="#sobre"> Sobre </a></li>
+                <li id="btn-contato"><a href="#contato"> Contato </a></li>
+                <li id="btn-pago"><a href="#pago"> Pago </a></li>
+            </ul>
+        </nav>
+    </div>
+<body>
+    <div class="topo">
+        <div class="burgao" id="menu" onclick="menu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="botoes">
+            <button class="btn-register" onclick="register()"> Register</button></p>
+            <button class="btn-login" onclick="login()"> Login </button>
+        </div>
+    </div>
+    <div class= "container">
+        <header>
+            <div class="cabecalho">
+                <div class="cabecalho-vazio"></div>
+                <h1 id="nome-site">Viva Letras</h1>
+                <div class="pesquisa">
+                    <div class="espaco-pesquisa">
+                        <input type="text" id="searchInput" placeholder="Pesquisar...">
+                    </div>
+                    <div class="btn-pesquisa">
+                        <button class="btn-search" id="btn-search" onclick="search()"> Buscar </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+    <div class="content">  
+        <div id="msgError"></div>
+        <main id="main-content">
+            <section id="home">
+                <h2> Bem-vindo ao Viva Letras! </h2>
+                <p> Explore o mundo da literatura e descubra novas histórias. </p>
+            </section>
+        </main>
+    </div>
+
+    <script src="./Assets/js/index.js"></script>
+</body>
+</html>

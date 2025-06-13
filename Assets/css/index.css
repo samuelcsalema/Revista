@@ -1,0 +1,302 @@
+* {
+    padding: 0;
+    text-align: center;
+    margin: 10;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #f7f4ed; /* Or your preferred color */
+}
+
+body {
+    background-color: #f7f4ed; /* Cor de fundo */ /*ffffff branco. f7f4ed lace. e8d9ed Petal */
+    background-attachment: fixed ;
+    font-family: Georgia, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #cee0f7;
+    text-align: center;
+    color: #000000;
+}
+
+.container {
+    background-color: #cee0f7 !important;
+    justify-content: center; /* Centralizando a área de texto */
+    width: 100%; /* Largura da área de texto */
+    padding: 0px; /* Espaçamento interno da área de texto */
+    color: #000000; /* Cor do texto */
+    font-size: 20px;
+}
+
+.content {
+    background-color: #f7f4ed; /* Cor de fundo */ /*ffffff branco. f7f4ed lace. e8d9ed Petal */
+    min-height: 100vh;
+}
+.topo {
+    background-color: #cee0f7 !important;
+    display: flex; /* Fazendo com que fique em linha */
+    justify-content: space-between; /* Espaçamento entre os itens */
+    align-items: center; /* Centralizando os itens verticalmente */
+    position: relative; /* Posicionando o topo */
+
+}
+/* Três linhas */
+.burgao {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1200;
+    width: 30px;
+    height: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.burgao span {
+    display: block;
+    height: 4px;
+    width: 100%;
+    background: #000000;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+/* Todos os botões */
+.botoes {
+    background-color: #cee0f7 !important;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #f7f4ed;
+    padding: 4px; /* Alinhando com o burgão */
+    margin-left: auto;
+}
+.btn-login {
+    z-index: 1100;
+    background-color: #cee0f7; /* Cor de fundo do botão */
+    border-color: #08264d; /* Cor da borda do botão */
+    color: #000000; /* Cor do texto do botão */
+    padding: 7px; /* Tamanho do botão */
+    font-weight: bold; /* Deixando o texto em negrito */
+    font-size: 8pt; /* Tamanho do texto */
+    margin-top: 0.3%; /* Espaçamento entre o botão e a barra de escrever */
+    margin-left: 96%;
+    border-radius: 8px; /* Arredondando o botão */
+    cursor: pointer; /* Fazendo com que o mouse mude quando passa em cima do botão */
+    outline: none; /* Retirando o contorno do botão */
+    transition: all .5 ease-out; /* Fazendo com que fique mais claro quando clica */
+}
+.btn-register{
+    z-index: 1100;
+    background-color: #cee0f7; /* Cor de fundo do botão */
+    border-color: #08264d; /* Cor da borda do botão */
+    color: #000000; /* Cor do texto do botão */
+    padding: 7px; /* Tamanho do botão */
+    font-weight: bold; /* Deixando o texto em negrito */
+    font-size: 8pt; /* Tamanho do texto */
+    border-radius: 8px; /* Arredondando o botão */
+    cursor: pointer; /* Fazendo com que o mouse mude quando passa em cima do botão */
+    outline: none; /* Retirando o contorno do botão */
+    transition: all .5 ease-out; /* Fazendo com que fique mais claro quando clica */
+    text-decoration: none; /* Retirando o sublinhado do link */
+}
+.btn-search{
+    background-color: #cee0f7; /* Cor de fundo do botão */
+    border-color: #08264d; /* Cor da borda do botão */
+    color: #000000; /* Cor do texto do botão */
+    padding: 7px; /* Tamanho do botão */
+    font-weight: bold; /* Deixando o texto em negrito */
+    font-size: 8pt; /* Tamanho do texto */
+    border-radius: 8px; /* Arredondando o botão */
+    cursor: pointer; /* Fazendo com que o mouse mude quando passa em cima do botão */
+    outline: none; /* Retirando o contorno do botão */
+    transition: all .5 ease-out; /* Fazendo com que fique mais claro quando clica */
+    
+}
+.btn-login,
+.btn-register {
+    margin-left: 0; /* Remove margin-left: 96%; */
+    margin-top: 0;  /* Optional: remove margin-top if not needed */
+}
+button:hover {
+    background-color: #08264d; /* Cor de fundo do botão ao clicar */
+    color: #ffffff; /* Cor do texto do botão ao clicar */
+}
+
+/* Barra de pesquisa */
+.cabecalho {
+    display: flex; /* Cor de fundo do cabeçalho */
+    align-items: center; /* Cor do texto do cabeçalho */
+    justify-content: space-between; /* Espaçamento interno do cabeçalho */
+    text-align: center; /* Centralizando o texto */
+    position: relative; /* Posicionando o cabeçalho */
+    padding: 0 24px; /* Espaçamento interno do cabeçalho */
+}
+.pesquisa {
+    display: flex; /* Fazendo com que fique em linha */
+    background-color: transparent; /* Cor de fundo da barra de pesquisa */
+    text-align: center; /* Centralizando o texto */
+    z-index: 500; /* Colocando em cima de tudo */
+    color: #000000; /* Cor do texto */
+    gap: 20px; /* Espaçamento entre de barra de pesquisa e botão */;
+    min-width: 220px; /* Largura mínima da barra de pesquisa */
+}
+.pesquisa input {
+    width: 100%; /* Largura da barra de pesquisa */
+    padding: 3px; /* Tamanho da barra de pesquisa */
+    border-color: #cee0f7; /* Retirando a borda da barra de pesquisa */
+    border-radius: 8px; /* Arredondando a barra de pesquisa */
+    background-color: #cee0f7; /* Cor de fundo da barra de pesquisa */
+    color: #000000; /* Cor do texto da barra de pesquisa */
+    font-size: 10pt; /* Tamanho do texto da barra de pesquisa */
+}
+.pesquisa input:focus {
+    outline: none; /* Retirando o contorno da barra de pesquisa */
+    box-shadow: 0 0 5px #cee0f7; /* Colocando uma sombra na barra de pesquisa */
+}
+/* Cabeçalho */
+.nome-site {
+    position: absolute; /* Posicionando o texto */
+    left: 50%; /* Centralizando o texto */
+    transform: translateX(-50%); /* Centralizando o texto */
+    font-size: 12pt; /* Tamanho do texto */
+    text-align: center; /* Centralizando o texto */
+    color: #000000; /* Cor do texto */
+    white-space: nowrap; /* Impedindo que o texto quebre */
+}
+.espaco-pesquisa{
+    justify-content: center; /* Centralizando a área de texto */
+}
+.cabecalho-vazio {
+    min-width: 220px; /* Same as .pesquisa for perfect centering */
+}
+/* Fundo */
+.censura {
+    min-width: 100%; /* Largura mínima do fundo */
+    min-height: 100%; /* Altura mínima do fundo */
+    z-index: 1000; /* Colocando em cima de tudo */
+    background-color: rgba(255, 255, 255, 0.705); /* Cor de fundo da mensagem de erro */
+    font-size: 25pt;
+    position: fixed;
+    cursor: default; /* Fazendo com que o mouse mude quando passa em cima do fundo */
+}
+/* Botões */
+.coluna-lado {
+    background-color: #cee0f7;
+    width: 200px;
+    transform: translateX(-100%); /* Escondendo a coluna lateral */
+    z-index: 1100; /* Colocando em cima de tudo */
+    min-width: 10vh; /* Largura mínima da coluna lateral */
+    min-height: 100vh; /* Altura mínima da coluna lateral */
+    margin-left: 200px; /* Espaçamento entre a coluna lateral e o conteúdo */
+    position: fixed; /* Posicionando a coluna lateral */
+}
+#coluna-lado.active {
+    transform: translateX(0);
+}
+.coluna-lado,
+nav ul,
+nav ul li {
+    background-color: #cee0f7 !important;
+}
+nav ul {
+    list-style: none;
+    flex-direction: column; /* Colocando os itens em coluna */
+    display: flex;
+    gap: 0px;
+    padding: 0;
+}
+nav ul li {
+    padding: 20px 20px;
+    border-radius: 0px;
+    cursor: pointer; /* Fazendo com que o mouse mude quando passa em cima do botão */
+    text-align: center; /* Centralizando o texto */
+    position: relative; /* Necessário para o hover funcionar corretamente */
+    transition:
+        background-color 1.5s ease,
+        transform 0.6s ease,
+        z-index 0s;
+    z-index: 1;
+}
+nav ul li a {
+    color: #000000;
+    text-decoration: none; /* Retirando o sublinhado do link */
+}
+nav ul li:hover {
+    background-color: #cee0f7 !important; /* Cor de fundo do botão ao passar o mouse */
+    transition: background-color 0.5s ease;
+    transform: scale(1.15);
+    z-index: 10; /* Bring to front on hover */
+}
+/* Erro para parte paga */
+#msgError{
+    text-align: center; /* Centralizando o texto */
+    color: #ff0000; /* Cor do texto */
+    font-size: 25pt;
+}
+.hidden {
+    display: none !important;
+}
+
+.fixed {
+    position: fixed; /* Posicionando o elemento */
+}
+
+/* Texto */
+#resumo {
+    color: #0b1957; /* Cor do texto */
+    font-size: 12pt; /* Tamanho do texto */
+    text-align: justify; /* Centralizando o texto */
+    margin: 0 auto; /* Centralizando o texto */
+}
+section {
+    text-align: justify;
+    margin: 0 auto; /* Centralizando o texto */
+    max-width: 700px; /* Largura máxima do texto */
+}
+section h2 {
+    color: #000000; /* Cor do texto */
+    font-size: 25pt; /* Tamanho do texto */
+    text-align: left; /* Centralizando o texto */
+    margin: 5px auto; /* Centralizando o texto */
+    max-width: 700px; /* Largura máxima do texto */
+    margin-top: 25px;
+}
+section p {
+    text-align: left; /* Centralizando o texto */
+    color: #000000 !important; /* Cor do texto */
+    font-size: 12pt; /* Tamanho do texto */
+    margin: 20 auto; /* Centralizando o texto */
+    max-width: 700px; /* Largura máxima do texto */
+    line-height: 1.5; /* Espaçamento entre as linhas */
+}
+#caderno4 h5 {
+    font-size: 11px; /* Tamanho do texto */
+    text-align: left; /* Centralizando o texto */
+    margin-top: 1%;
+}
+/* Modificando display dos autores */
+#autores {
+    color: #000000
+}
+#nomes-autores{
+    color: #0b1957;
+}
+/* Modificando cor do título dos cadernos */
+section[id^="caderno"] h2 {
+    color: #000000;
+}
+section[id^="home"] h2 {
+    color: #000000;
+}
+section[id^="sobre"] h2 {
+    color: #000000;
+}
+section[id^="contato"] h2 {
+    color: #000000;
+}
