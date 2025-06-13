@@ -4,7 +4,7 @@
     margin: 0;
 }
 
-@media (max-width: 600px) {
+@media (hover: none) and (pointer: coarse) and (max-width: 600px) {
     .container, .content, section {
         width: 100% !important;
         max-width: 100vw !important;
@@ -56,14 +56,16 @@
         font-size: 16pt !important;
     }
     .botoes {
-        flex-direction: row !important; /* Change from column to row */
+        flex-direction: column !important; /* Change from column to row */
         gap: 8px !important;
         padding: 8px !important;
     }
     .btn-login, .btn-register, .btn-search {
-        width: auto; /* Remove width: 100% */
+        width: auto;
     }
-
+    section h2 {
+        font-size: 30pt !important; /* Tamanho do texto */
+    }
 }
 
 html, body {
