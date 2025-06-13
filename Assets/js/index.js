@@ -217,7 +217,7 @@ document.getElementById("btn-pago").addEventListener("click", (event) => {
 document.getElementById("id-censura").addEventListener("click", () => {
     censura.classList.add('hidden');
     colunalado.classList.add('hidden');
-    burgao.classList.toggle('fixed');
+    burgao.classList.remove('fixed');
 });
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -250,6 +250,8 @@ function register() {
 }
 
 function menu() {
+    let censura = document.querySelector('.censura');
+    let colunalado = document.querySelector('.coluna-lado');
     censura.classList.toggle('hidden');
     colunalado.classList.toggle('hidden');
     burgao.classList.toggle('fixed');

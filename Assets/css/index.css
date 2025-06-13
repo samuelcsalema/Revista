@@ -55,6 +55,14 @@
     #msgError {
         font-size: 16pt !important;
     }
+    .botoes {
+        flex-direction: row !important; /* Change from column to row */
+        gap: 8px !important;
+        padding: 8px !important;
+    }
+    .btn-login, .btn-register, .btn-search {
+        width: auto; /* Remove width: 100% */
+    }
 }
 
 html, body {
