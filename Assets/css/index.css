@@ -61,7 +61,7 @@
         font-size: 16pt !important;
     }
     .botoes {
-        flex-direction: row !important; /* Change from column to row */
+        flex-direction: row !important; /* De coluna para linha */
         gap: 8px !important;
         padding: 8px !important;
     }
