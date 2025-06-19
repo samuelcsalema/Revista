@@ -55,11 +55,17 @@ html, body { /* Definição importante */
         max-width: 100vw !important; /* Largura máxima do texto*/
         text-align: left !important; /* Alinhando o texto na esquerda */
     }
-    section h2{ /* Tamanho do título */
-        font-size: 30pt !important; /* Tamanho do texto */
+    section h2{ /* Título */
+        font-size: 30px !important; /* Tamanho */
     }
-    section h4, span { /* Tamanho do título */
-    font-size: 0.8em !important; /* Tamanho do texto */
+    section h4, span { /* Autores */
+    font-size: 0.9em !important; /* Tamanho do texto */
+    }
+    section h6 { /* Palavras chaves */
+    font-size: 15px !important; /* Tamanho do texto */
+    text-align: left !important; /* Centralizando o texto */
+    margin-top: 2% !important;
+    color: #000000 !important;
     }
 }
 
@@ -334,19 +340,19 @@ section h4 { /* Autores */
     font-size: 13px; /* Tamanho do texto */
     text-align: left; /* Centralizando o texto */
     margin-top: 1%;
-    color: #000000
+    color: #000000;
 }
 section h5 { /* Subtítulo */
     font-size: 20px; /* Tamanho do texto */
     text-align: center; /* Centralizando o texto */
     margin-top: 2%;
-    color: #000000
+    color: #000000;
 }
-section h6 { /* Autores */
+section h6 { /* Palavras chaves */
     font-size: 15px; /* Tamanho do texto */
     text-align: left; /* Centralizando o texto */
     margin-top: 2%;
-    color: #000000
+    color: #000000;
 }
 section span { /* Nome dos autores */
     font-size: 13px; /* Tamanho do texto */
@@ -360,7 +366,7 @@ section p { /* Texto */
     max-width: 700px; /* Largura máxima do texto */
     line-height: 1.5; /* Espaçamento entre as linhas */
 }
-section footer {
+section footer { /* Bibliografia */
     text-align: justify; /* Centralizando o texto */
     color: #000000 !important; /* Cor do texto */
     font-size: 12pt; /* Tamanho do texto */
@@ -368,7 +374,7 @@ section footer {
     max-width: 700px; /* Largura máxima do texto */
     line-height: 1.5; /* Espaçamento entre as linhas */
 }
-#acesso {
+#acesso { /* Acesso da bibliografia */
     text-align: justify; /* Centralizando o texto */
     color: #000000 !important; /* Cor do texto */
     font-size: 12pt; /* Tamanho do texto */
