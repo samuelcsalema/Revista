@@ -297,12 +297,51 @@ nav ul li:hover { /* Interação quando o mouse passa por cima */
    Mensagem de Erro
    ========================= */
 
-
+#msgError {
+    display: flex; /* Alinhando o texto ao centro */
+    flex-direction: row; /* Deixa lado a lado */
+    justify-content: center; /* Centraliza */
+    gap: 100px; /* Cria espaço entre os cards */
+}
 .hidden {
     display: none !important; /* Esconde a mensagem de erro */
 }
 .oferta { /* Configuração geral dos cards de oferta */
-    display: block;
+    width: 20%; /* Largura dos cards */
+    padding: 25px 0% 0% 20px; /* Altura do card */
+    justify-content: center; /* Centralizando a área de Cadastro */
+    margin-top: 100px; /* Espaçamento entre o cabeçalho e os cards */
+    background-color: #e9f3ff; /* Cor de fundo */
+    border-radius: 5% 0% 7.5% 7.5%; /* Arredondando as bordas */
+    box-shadow: 4px 3px 1px 0px #00000075; /* Sombras do fundo */
+}
+.plano {
+    text-align: start; /* Alinhando ao canto */
+    font-size: 12px;
+    margin: 0 10% 0 5%; /* Distância das bordas */
+}
+.valor {
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.recomendacao {
+    font-size: medium;
+    justify-content: center;
+    color: #000000ad;
+}
+.beneficios {
+    display: flex;
+    flex-direction: column;
+    color: #000000ad;
+    text-align: left;
+}
+.separado {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    margin: 0 0% 0 4%;
+    padding-bottom: 15px;
 }
 
 /* =========================
