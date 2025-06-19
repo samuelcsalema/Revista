@@ -18,71 +18,48 @@ html, body { /* Definição importante */
    ========================= */
 
 @media (max-width: 600px) {
-    .container, .content, section {
-        width: 100% !important;
-        max-width: 100vw !important;
-        padding: 8px !important;
-        box-sizing: border-box;
+    .container, .content, section { /* Área do cabeçalho, conteúdo e texto  */
+        width: 100% !important; /* Força o conteúdo ocupar a tela toda */
+        max-width: 100vw !important; /* Impede o conteúdo de ir além da tela */
+        padding: 8px !important; /* Afasta os elementos das bordas */
+        box-sizing: border-box; /* Impede o texto de ir além da tela */
     }
-    .cabecalho, .topo, .botoes, .pesquisa {
-        flex-direction: column !important;
-        align-items: stretch !important;
-        gap: 8px !important;
-        padding: 8px !important;
+    .cabecalho, .topo, .botoes, .pesquisa { /* Toda a área superior do site */
+        flex-direction: column !important; /* Coloca a área de pesquisa abaixo do nome */
+        align-items: center !important; /* Alinha a barra de pesquisa ao centro */
+        gap: 8px !important; /* Distância entre nome e área de pesquisa */
     }
-    .nome-site {
-        position: static !important;
-        transform: none !important;
-        font-size: 16pt !important;
-        margin-bottom: 8px;
-        white-space: normal !important;
-    }
-    .burgao {
-        top: 10px;
-        left: 10px;
-        width: 28px;
-        height: 20px;
-    }
-    .coluna-lado {
-        width: 50vw !important;
-        min-width: 0 !important;
-        margin-left: 0 !important;
+    .coluna-lado { /* Coluna Lateral */
+        width: 50vw !important; /* Tamanho da barra */
         transition: transform 0.3s ease !important; /* Transição suave ao abrir e fechar */
-        min-height: 100vh;
+        min-height: 100vh !important; /* Garante que é da altura da tela */
+        overflow-y: auto; /* Permite "scrollar" caso a tela seja menor */
+        overflow-x: hidden; /* Impede a barra de rodar lateralmente */
     }
-    nav ul li {
-        padding: 14px 8px;
-        font-size: 1em;
+    nav ul li { /* Edição das opções */
+        padding: 14px 8px !important; /* Espaço entre itens */
+        font-size: 1em !important; /* Tamanho do texto */
     }
-    nav ul li a:focus {
-        outline: none !important;
-        box-shadow: none !important;
+    .btn-login, .btn-register, .btn-search { /* Configurando os botões */
+        font-size: 12pt !important; /* Tamanho do texto */
+        padding: 10px !important; /* Altura do botão */
+        width: auto; /* Largura do botão dentro da div */
     }
-    .btn-login, .btn-register, .btn-search {
-        font-size: 12pt !important;
-        padding: 10px !important;
-        margin-left: 0 !important;
-        margin-top: 0 !important;
-        width: 100%;
-    }
-    #resumo, section p, section h2 {
-        font-size: 1em !important;
-        max-width: 100vw !important;
-        text-align: left !important;
-    }
-    #msgError {
-        font-size: 16pt !important;
-    }
-    .botoes {
+    .botoes { /* Login e Registro */
         flex-direction: row !important; /* De coluna para linha */
-        gap: 8px !important;
-        padding: 8px !important;
+        gap: 4px !important; /* Distância entre os botões */
+        padding: 8px !important; /* Alinhando ao topo */
     }
-    .btn-login, .btn-register, .btn-search {
-        width: auto;
+    #resumo, section p, section h2 { /* Texto */
+        font-size: 1em !important; /* Tamanho da fonte */
+        max-width: 100vw !important; /* Largura máxima do texto*/
+        text-align: left !important; /* Alinhando o texto na esquerda */
     }
-    section h2 {
+    section h2{ /* Tamanho do título */
         font-size: 30pt !important; /* Tamanho do texto */
+    }
+    section h4, span { /* Tamanho do título */
+    font-size: 0.8em !important; /* Tamanho do texto */
     }
 }
 
@@ -312,7 +289,7 @@ nav ul li:hover { /* Interação quando o mouse passa por cima */
    Mensagem de Erro
    ========================= */
 
-   
+
 .hidden {
     display: none !important; /* Esconde a mensagem de erro */
 }
