@@ -348,6 +348,14 @@ section p { /* Texto */
     max-width: 700px; /* Largura máxima do texto */
     line-height: 1.5; /* Espaçamento entre as linhas */
 }
+section footer {
+    text-align: justify; /* Centralizando o texto */
+    color: #000000 !important; /* Cor do texto */
+    font-size: 12pt; /* Tamanho do texto */
+    margin: 20 auto; /* Centralizando o texto */
+    max-width: 700px; /* Largura máxima do texto */
+    line-height: 1.5; /* Espaçamento entre as linhas */
+}
 #acesso {
     text-align: justify; /* Centralizando o texto */
     color: #000000 !important; /* Cor do texto */
