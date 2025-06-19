@@ -270,7 +270,8 @@ nav ul li { /* Cada opção */
         transform 0.6s ease; /* Velocidade que o fundo diminui */
 }
 nav ul li:hover { /* Interação quando o mouse passa por cima */
-    background-color: #006bf7 !important; /* Cor de fundo do botão ao passar o mouse */
+    background-color: #08264d !important; /* Cor de fundo do botão ao passar o mouse */
+    color: #ffffff; /* Cor do texto */
     transition: background-color 1.0s ease; /* Velocidade que a cor de fundo muda */
     transform: scale(1.15); /* Quanto aumenta */
     z-index: 2; /* Se sobrepõe aos outros botões */
