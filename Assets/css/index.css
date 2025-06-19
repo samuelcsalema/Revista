@@ -72,6 +72,7 @@ body { /* Detalhes gerais */
     font-family: Georgia, sans-serif; /* Fonte padrão do site */
     margin: 0; /* Tirando as margens*/
     padding: 0; /* Espaço 0 */
+    margin-bottom: 15%;
 }
 .container {
     background-color: #cee0f7 !important;
@@ -293,17 +294,14 @@ nav ul li:hover { /* Interação quando o mouse passa por cima */
 .hidden {
     display: none !important; /* Esconde a mensagem de erro */
 }
+.oferta { /* Configuração geral dos cards de oferta */
+    display: block;
+}
 
 /* =========================
    Conteúdo
    ========================= */
 
-#resumo { /* Resumo */
-    color: #0b1957; /* Cor do texto */
-    font-size: 12pt; /* Tamanho do texto */
-    text-align: justify; /* Centralizando o texto */
-    margin: 0 auto; /* Centralizando o texto */
-}
 section { /* Seção */
     text-align: justify;
     margin: 0 auto; /* Centralizando o texto */
@@ -317,21 +315,44 @@ section h2 { /* Título */
     max-width: 700px; /* Largura máxima do texto */
     margin-top: 25px; /* Espaçamento entre o título e o cabeçalho */
 }
-section p { /* Texto */
+section div { /* Audios */
+    margin: 0 auto; /* Centralizando o texto */
+}
+section h3 { /* Resumo */
+    color: #0b1957; /* Cor do texto */
+    font-size: 12pt; /* Tamanho do texto */
+    text-align: justify; /* Centralizando o texto */
+    margin: 0 auto; /* Centralizando o texto */
+}
+section h4 { /* Autores */
+    font-size: 11px; /* Tamanho do texto */
     text-align: left; /* Centralizando o texto */
+    margin-top: 1%;
+    color: #000000
+}
+section h5 { /* Autores */
+    font-size: 20px; /* Tamanho do texto */
+    text-align: center; /* Centralizando o texto */
+    margin-top: 2%;
+    color: #000000
+}
+section span { /* Nome dos autores */
+    font-size: 11px; /* Tamanho do texto */
+    color: #0b1957;
+}
+section p { /* Texto */
+    text-align: justify; /* Centralizando o texto */
     color: #000000 !important; /* Cor do texto */
     font-size: 12pt; /* Tamanho do texto */
     margin: 20 auto; /* Centralizando o texto */
     max-width: 700px; /* Largura máxima do texto */
     line-height: 1.5; /* Espaçamento entre as linhas */
 }
-h4 { /* Autores */
-    font-size: 11px; /* Tamanho do texto */
-    text-align: left; /* Centralizando o texto */
-    margin-top: 1%;
-    color: #000000
-}
-span { /* Nome dos autores */
-    font-size: 11px; /* Tamanho do texto */
-    color: #0b1957;
+#acesso {
+    text-align: justify; /* Centralizando o texto */
+    color: #000000 !important; /* Cor do texto */
+    font-size: 12pt; /* Tamanho do texto */
+    margin: 20 auto; /* Centralizando o texto */
+    max-width: 700px; /* Largura máxima do texto */
+    line-height: 1.5; /* Espaçamento entre as linhas */
 }
