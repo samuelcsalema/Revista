@@ -359,7 +359,6 @@ section p { /* Texto */
     margin: 20 auto; /* Centralizando o texto */
     max-width: 700px; /* Largura máxima do texto */
     line-height: 1.5; /* Espaçamento entre as linhas */
-    padding-bottom: 20px;
 }
 section footer { /* Bibliografia */
     text-align: justify; /* Centralizando o texto */
