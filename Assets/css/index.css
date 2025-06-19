@@ -376,6 +376,11 @@ section footer { /* Bibliografia */
     max-width: 700px; /* Largura máxima do texto */
     line-height: 1.5; /* Espaçamento entre as linhas */
 }
+#Aline {
+    text-align: right; /* Alinhando com a direita */
+    color: #000000; /* Cor do texto */
+    font-size: small; /* Diminuido o tamanho */
+}
 audio { /* Audios */
     display: flex; /* Fazendo com que fique em linha */
     margin: auto; /* Centralizando a caixa */

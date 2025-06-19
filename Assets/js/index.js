@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
     // Define a home como padrão
-    showSection("home");
+    showSection("caderno6");
 });
 
 
