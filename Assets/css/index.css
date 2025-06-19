@@ -309,14 +309,20 @@ section { /* Seção */
 }
 section h2 { /* Título */
     color: #000000;
-    font-size: 25pt;
+    font-size: 30px;
     text-align: left; /* Alinhando o texto na esquerda */
     margin: 5px auto; /* Ajustando as margens */
     max-width: 700px; /* Largura máxima do texto */
     margin-top: 25px; /* Espaçamento entre o título e o cabeçalho */
 }
-section div { /* Audios */
-    margin: 0 auto; /* Centralizando o texto */
+audio { /* Audios */
+    display: flex; /* Fazendo com que fique em linha */
+    margin: auto; /* Centralizando a caixa */
+}
+video { /* Audios */
+    padding: 20px;
+    display: flex; /* Fazendo com que fique em linha */
+    margin: auto; /* Centralizando a caixa */
 }
 section h3 { /* Resumo */
     color: #0b1957; /* Cor do texto */
@@ -325,19 +331,25 @@ section h3 { /* Resumo */
     margin: 0 auto; /* Centralizando o texto */
 }
 section h4 { /* Autores */
-    font-size: 11px; /* Tamanho do texto */
+    font-size: 13px; /* Tamanho do texto */
     text-align: left; /* Centralizando o texto */
     margin-top: 1%;
     color: #000000
 }
-section h5 { /* Autores */
+section h5 { /* Subtítulo */
     font-size: 20px; /* Tamanho do texto */
     text-align: center; /* Centralizando o texto */
     margin-top: 2%;
     color: #000000
 }
+section h6 { /* Autores */
+    font-size: 15px; /* Tamanho do texto */
+    text-align: left; /* Centralizando o texto */
+    margin-top: 2%;
+    color: #000000
+}
 section span { /* Nome dos autores */
-    font-size: 11px; /* Tamanho do texto */
+    font-size: 13px; /* Tamanho do texto */
     color: #0b1957;
 }
 section p { /* Texto */
