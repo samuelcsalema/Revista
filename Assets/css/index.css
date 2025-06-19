@@ -59,7 +59,7 @@ html, body { /* Definição importante */
         font-size: 30px !important; /* Tamanho */
     }
     section h4, span { /* Autores */
-    font-size: 0.9em !important; /* Tamanho do texto */
+    font-size: 14px !important; /* Tamanho do texto */
     }
     section h6 { /* Palavras chaves */
     font-size: 15px !important; /* Tamanho do texto */
@@ -321,19 +321,11 @@ section h2 { /* Título */
     max-width: 700px; /* Largura máxima do texto */
     margin-top: 25px; /* Espaçamento entre o título e o cabeçalho */
 }
-audio { /* Audios */
-    display: flex; /* Fazendo com que fique em linha */
-    margin: auto; /* Centralizando a caixa */
-}
-video { /* Audios */
-    padding: 20px;
-    display: flex; /* Fazendo com que fique em linha */
-    margin: auto; /* Centralizando a caixa */
-}
 section h3 { /* Resumo */
-    color: #0b1957; /* Cor do texto */
-    font-size: 12pt; /* Tamanho do texto */
+    font-size: 13pt; /* Tamanho do texto */
+    font-weight: normal; /* Tirando o negrito */
     text-align: justify; /* Centralizando o texto */
+    color: #000000; /* Cor do texto */
     margin: 0 auto; /* Centralizando o texto */
 }
 section h4 { /* Autores */
@@ -347,6 +339,8 @@ section h5 { /* Subtítulo */
     text-align: center; /* Centralizando o texto */
     margin-top: 2%;
     color: #000000;
+    padding-bottom: 10px;
+
 }
 section h6 { /* Palavras chaves */
     font-size: 15px; /* Tamanho do texto */
@@ -381,4 +375,13 @@ section footer { /* Bibliografia */
     margin: 20 auto; /* Centralizando o texto */
     max-width: 700px; /* Largura máxima do texto */
     line-height: 1.5; /* Espaçamento entre as linhas */
+}
+audio { /* Audios */
+    display: flex; /* Fazendo com que fique em linha */
+    margin: auto; /* Centralizando a caixa */
+}
+video { /* Audios */
+    padding: 20px;
+    display: flex; /* Fazendo com que fique em linha */
+    margin: auto; /* Centralizando a caixa */
 }
