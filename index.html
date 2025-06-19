@@ -8,32 +8,37 @@
     <title> Viva Letras </title>
 </head>
 <body>
+    <!--- Desfocando a Main ao ativar a barra lateral --->
     <div id="id-censura" class="censura hidden"></div>
+    <!--- Barra Lateral --->
     <div class="coluna-lado">
         <nav>
             <ul>
                 <li id="espaco-vazio"></li>
-                <li id="btn-home"><a href="#home"> Home </a></li>
-                <li id="btn-caderno1"><a href="#caderno1"> Caderno 1 </a></li>
-                <li id="btn-caderno2"><a href="#caderno2"> Caderno 2 </a></li>
-                <li id="btn-caderno3"><a href="#caderno3"> Caderno 3 </a></li>
-                <li id="btn-caderno4"><a href="#caderno4"> Educação Especial </a></li>
-                <li id="btn-caderno5"><a href="#caderno5"> Caderno 5 </a></li>
-                <li id="btn-caderno6"><a href="#caderno6"> Caderno 6 </a></li>
-                <li id="btn-caderno7"><a href="#caderno7"> Caderno 7 </a></li>
-                <li id="btn-caderno8"><a href="#caderno8"> Caderno 8 </a></li>
-                <li id="btn-sobre"><a href="#sobre"> Sobre </a></li>
-                <li id="btn-contato"><a href="#contato"> Contato </a></li>
-                <li id="btn-pago"><a href="#pago"> Pago </a></li>
+                <li id="btn-home"> Home </li>
+                <li id="btn-caderno1"> Caderno 1 </li>
+                <li id="btn-caderno2"> Caderno 2 </li>
+                <li id="btn-caderno3"> Caderno 3 </li>
+                <li id="btn-caderno4"> Educação Especial </li>
+                <li id="btn-caderno5"> Caderno 5 </li>
+                <li id="btn-caderno6"> Caderno 6 </li>
+                <li id="btn-caderno7"> Caderno 7 </li>
+                <li id="btn-caderno8"> Caderno 8 </li>
+                <li id="btn-sobre"> Sobre </li>
+                <li id="btn-contato"> Contato </li>
+                <li id="btn-pago"> Pago </li>
             </ul>
         </nav>
     </div>
+    <!--- Botões importantes --->
     <div class="topo">
+        <!--- Menu Hamburguer --->
         <div class="burgao" id="menu" onclick="menu()">
             <span></span>
             <span></span>
             <span></span>
         </div>
+        <!--- Botões de usuário --->
         <div class="botoes">
             <button class="btn-register" onclick="register()"> Register</button></p>
             <button class="btn-login" onclick="login()"> Login </button>
@@ -41,9 +46,11 @@
     </div>
     <div class= "container">
         <header>
+            <!--- Cabeçalho --->
             <div class="cabecalho">
                 <div class="cabecalho-vazio"></div>
                 <h1 id="nome-site">Viva Letras</h1>
+                <!--- Área de pesquisa --->
                 <div class="pesquisa">
                     <div class="espaco-pesquisa">
                         <input type="text" id="searchInput" placeholder="Pesquisar...">
@@ -55,16 +62,92 @@
             </div>
         </header>
     </div>
-    <div class="content">  
-        <div id="msgError"></div>
+    <div class="content">
+        <!--- Erro, usuário não assinante --->
+        <div id="msgError" class="hidden">
+            <div id="card-free" class="oferta"></div>
+            <div id="card-pago1" class="oferta"></div>
+            <div id="card-pago2" class="oferta"></div>
+        </div>
+        <!--- Conteúdo --->
         <main id="main-content">
-            <section id="home">
+            <!--- Home --->
+            <section id="home" style="display:none">
                 <h2> Bem-vindo ao Viva Letras! </h2>
                 <p> Explore o mundo da literatura e descubra novas histórias. </p>
             </section>
+            <!--- Cadernos --->
+            <section id="caderno1" style="display:none">
+                <h2> Título do caderno 1 </h2>
+                <p> Este é o conteúdo do primeiro caderno. </p>
+            </section >
+            <section id="caderno2" style="display:none">
+                <h2> Título do caderno 2 </h2>
+                <p> Este é o conteúdo do segundo caderno. </p>
+            </section>
+            <section id="caderno3" style="display:none">
+                <h2> Título do caderno 3 </h2>
+                <p> Este é o conteúdo do terceiro caderno. </p>
+            </section>
+            <section id="caderno4" style="display:none">
+                <h2> Educação Especial: Uma Responsabilidade de Inclusão </h2>
+                <h3 id="resumo"> Veja adiante uma obra literaria produzida pelo artista contemporâneo de renome nacional PABLO VITTAR. </h3>
+                <h4 id="autores"> Por: <span id="nomes-autores"> Ana Clara, Lauana, Laura e Keylana </span> </h4>
+                <p id="texto"> Eu já sabia
+                    Que ia dar problema
+                    Desde a primeira vez
+                    Que te encontrei
+
+                    Com esse jeito de olhar
+                    Já era
+                    Foi me conquistando
+                    Me deixando sem ar
+
+                    [Pabllo Vittar]
+                    Não sei, mas tenho medo
+                    Do que posso sentir
+                    Eu sei, mas tô querendo
+                    Mesmo assim me iludir
+                    </p>
+            </section>
+            <section id="caderno5" style="display:none">
+                <h2> Título do caderno 5 </h2>
+                <p> Este é o conteúdo do quinto caderno. </p>
+            </section>
+            <section id="caderno6" style="display:none">
+                <h2> Título do caderno 6 </h2>
+                <p> Este é o conteúdo do sexto caderno. </p>
+            </section>
+            <section id="caderno7" style="display:none">
+                <h2> Título do caderno 7 </h2>
+                <p> Este é o conteúdo do sétimo caderno. </p>
+            </section>
+            <section id="caderno8" style="display:none">
+                <h2> Título do caderno 8 </h2>
+                <p> Este é o conteúdo do oitavo caderno. </p>
+            </section>
+            <!--- Sobre --->
+            <section id="sobre" style="display:none">
+                <h2> Sobre Nós </h2>
+                    <p> Olá, pessoal! Somos do primeiro período de Letras -
+                    Português e Inglês da UEMG Campus Ibirité.
+                    O nosso objetivo principal é trazer para você
+                    espectador, notícias interessantes presentes no
+                    mundo educacional como futuros docentes!. </p>
+            </section >
+            <!--- Contato --->
+            <section id="contato" style="display:none">
+                <h2> Contato </h2>
+                <p> @vivaletrasuemg </p>
+            </section>
+            <!--- Conteúdo pago --->
+            <section id="pago" style="display:none">
+                <h2> Extra </h2>
+                <p> Conteúdo da área apenas para assinantes. </p>
+            </section>
         </main>
     </div>
-
+    <!--- Trazendo o JS --->
     <script src="./Assets/js/index.js"></script>
 </body>
 </html>

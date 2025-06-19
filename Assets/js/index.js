@@ -12,207 +12,50 @@ let burgao = document.querySelector('.burgao');
 let userLogado = JSON.parse(localStorage.getItem('userLogado')) 
 let logado = document.querySelector('#logado')
 
+
+
 document.addEventListener("DOMContentLoaded", () => {
-    const mainContent = document.getElementById("main-content");
-
-    // Conteúdo de cada botão
-    const content = {
-        home: `
-            <section id="home">
-                <h2> Bem-vindo ao Viva Letras! </h2>
-                <p> Explore o mundo da literatura e descubra novas histórias. </p>
-            </section>
-            `,
-        caderno1: `
-            <section id="caderno1">
-                <h2> Título do caderno 1 </h2>
-                <p> Este é o conteúdo do primeiro caderno. </p>
-            </section >
-            `,
-        caderno2: `
-            <section id="caderno2" >
-                <h2> Título do caderno 2 </h2>
-                <p> Este é o conteúdo do segundo caderno. </p>
-            </section>
-            `,
-        caderno3: `
-            <section id="caderno3">
-                <h2> Título do caderno 3 </h2>
-                <p> Este é o conteúdo do terceiro caderno. </p>
-            </section>
-                `,
-        caderno4: `
-            <section id="caderno4">
-                <h2> Educação Especial: Uma Responsabilidade de Inclusão </h2>
-                <h3 id="resumo"> Veja adiante uma obra literaria produzida pelo artista contemporâneo de renome nacional PABLO VITTAR. </h3>
-                <h5 id="autores"> Por: <h12 id="nomes-autores"> Ana Clara, Lauana, Laura e Keylana </h12> </h5>
-                <p id="texto"> Eu já sabia
-                    Que ia dar problema
-                    Desde a primeira vez
-                    Que te encontrei
-
-                    Com esse jeito de olhar
-                    Já era
-                    Foi me conquistando
-                    Me deixando sem ar
-
-                    [Pabllo Vittar]
-                    Não sei, mas tenho medo
-                    Do que posso sentir
-                    Eu sei, mas tô querendo
-                    Mesmo assim me iludir
-
-                    E se for pra sofrer
-                    Quero sofrer gostoso
-                    Com esse teu corpo
-                    Sensual, maravilhoso </p>
-            </section>
-                    `,
-        caderno5: `
-            <section id="caderno5">
-                <h2> Título do caderno 5 </h2>
-                <p> Este é o conteúdo do quinto caderno. </p>
-            </section>
-                `,
-        caderno6: `
-            <section id="caderno6">
-                <h2> Título do caderno 6 </h2>
-                <p> Este é o conteúdo do sexto caderno. </p>
-            </section>
-                `,
-        caderno7: `
-            <section id="caderno7">
-                <h2> Título do caderno 7 </h2>
-                <p> Este é o conteúdo do sétimo caderno. </p>
-            </section>
-                `,
-        caderno8: `
-            <section id="caderno8">
-                <h2> Título do caderno 8 </h2>
-                <p> Este é o conteúdo do oitavo caderno. </p>
-            </section>
-                `,
-        sobre: `
-            <section id="sobre">
-            <h2> Sobre Nós </h2>
-                    <p> Olá, pessoal! Somos do primeiro período de Letras -
-                    Português e Inglês da UEMG Campus Ibirité.
-                    O nosso objetivo principal é trazer para você
-                    espectador, notícias interessantes presentes no
-                    mundo educacional como futuros docentes!. </p>
-            </section >
-                `,
-        contato: `
-            <section id="contato">
-            <h2> Contato </h2>
-                <p> @vivaletrasuemg </p>
-            </section>
-            `,
-        pago: `
-            <section id="pago">
-                <h2> Extra </h2>
-                <p> Conteúdo da área apenas para assinantes. </p>
-            </section>
-        `,
-        error: `
-            <section id="error">
-            </section>
-        `
+    // Conecta o id do nav com o id da main
+    const navMap = {
+//          Button       Section         
+        "btn-home": "home",
+        "btn-caderno1": "caderno1",
+        "btn-caderno2": "caderno2",
+        "btn-caderno3": "caderno3",
+        "btn-caderno4": "caderno4",
+        "btn-caderno5": "caderno5",
+        "btn-caderno6": "caderno6",
+        "btn-caderno7": "caderno7",
+        "btn-caderno8": "caderno8",
+        "btn-sobre": "sobre",
+        "btn-contato": "contato"
     };
-
-    // Botões pra mudar o conteúdo da página inicial
-document.getElementById("btn-home").addEventListener("click", (event) => {
-    event.preventDefault();
-    hideError(); // Esconde a mensagem de erro
-    menu(); // Chama a função menu para mostrar a censura e a coluna ao lado // Esconde a mensagem de erro
-    mainContent.innerHTML = content.home;
+    // Olha o ID de cada botão, junta com os IDs da main e adiciona o evento de click
+    Object.entries(navMap).forEach(([btnId, sectionId]) => {
+        document.getElementById(btnId).addEventListener("click", (event) => {
+            event.preventDefault();
+            hideError();
+            menu();
+            showSection(sectionId);
+        });
+    });
+    // Parte específica para pago
+    document.getElementById("btn-pago").addEventListener("click", (event) => {
+        event.preventDefault();
+        if (token == true) {
+            msgError.classList.add('hidden'); 
+            menu();
+            showSection("pago");
+        } else {
+            msgError.classList.remove('hidden');
+            showSection("error");
+            menu();
+        }
+    });
+    // Define a home como padrão
+    showSection("home");
 });
 
-document.getElementById("btn-caderno1").addEventListener("click", (event) => {
-    event.preventDefault();
-    hideError(); // Esconde a mensagem de erro
-    menu(); // Chama a função menu para mostrar a censura e a coluna ao lado // Esconde a mensagem de erro
-    mainContent.innerHTML = content.caderno1;
-});
-
-document.getElementById("btn-caderno2").addEventListener("click", (event) => {
-    event.preventDefault();
-    hideError(); // Esconde a mensagem de erro
-    menu(); // Chama a função menu para mostrar a censura e a coluna ao lado // Esconde a mensagem de erro
-    mainContent.innerHTML = content.caderno2;
-});
-
-document.getElementById("btn-caderno3").addEventListener("click", (event) => {
-    event.preventDefault();
-    hideError(); // Esconde a mensagem de erro
-    menu(); // Chama a função menu para mostrar a censura e a coluna ao lado
-    mainContent.innerHTML = content.caderno3;
-});
-
-document.getElementById("btn-caderno4").addEventListener("click", (event) => {
-    event.preventDefault();
-    hideError(); // Esconde a mensagem de erro
-    menu(); // Chama a função menu para mostrar a censura e a coluna ao lado
-    mainContent.innerHTML = content.caderno4;
-});
-
-document.getElementById("btn-caderno5").addEventListener("click", (event) => {
-     event.preventDefault();
-     hideError(); // Esconde a mensagem de erro
-    menu(); // Chama a função menu para mostrar a censura e a coluna ao lado
-     mainContent.innerHTML = content.caderno5;
-});
-
-document.getElementById("btn-caderno6").addEventListener("click", (event) => {
-     event.preventDefault();
-     hideError(); // Esconde a mensagem de erro
-    menu(); // Chama a função menu para mostrar a censura e a coluna ao lado
-     mainContent.innerHTML = content.caderno6;
-});
-
-document.getElementById("btn-caderno7").addEventListener("click", (event) => {
-    event.preventDefault();
-    hideError(); // Esconde a mensagem de erro
-    menu(); // Chama a função menu para mostrar a censura e a coluna ao lado
-    mainContent.innerHTML = content.caderno7;
-});
-
-document.getElementById("btn-caderno8").addEventListener("click", (event) => {
-    event.preventDefault();
-    hideError(); // Esconde a mensagem de erro
-    menu(); // Chama a função menu para mostrar a censura e a coluna ao lado
-    mainContent.innerHTML = content.caderno8;
-});
-
-document.getElementById("btn-sobre").addEventListener("click", (event) => {
-    event.preventDefault();
-    hideError(); // Esconde a mensagem de erro
-    menu(); // Chama a função menu para mostrar a censura e a coluna ao lado
-    mainContent.innerHTML = content.sobre;
-});
-
-document.getElementById("btn-contato").addEventListener("click", (event) => {
-    event.preventDefault(); // Previne o comportamento padrão do botão
-    hideError(); // Esconde a mensagem de erro
-    menu(); // Chama a função menu para mostrar a censura e a coluna ao lado
-    mainContent.innerHTML = content.contato; //
-
-});
-
-document.getElementById("btn-pago").addEventListener("click", (event) => {
-    event.preventDefault();
-    if (token == true) {
-        hideError(); // Esconde a mensagem de erro
-        menu(); // Chama a função menu para mostrar a censura e a coluna ao lado
-        mainContent.innerHTML = content.pago;
-    } else {
-        msgError.classList.remove('hidden');
-        msgError.innerHTML = '<strong> Você precisa estar logado para acessar essa área </strong>' // Mensagem de erro
-        mainContent.innerHTML = content.error;
-        menu(); // Chama a função menu para mostrar a censura e a coluna ao lado
-    }
-});
-});
 
 document.getElementById("id-censura").addEventListener("click", () => {
     censura.classList.add('hidden');
@@ -236,6 +79,14 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+function showSection(sectionId) {
+    document.querySelectorAll('#main-content > section').forEach(sec => {
+        sec.style.display = 'none';
+    });
+    const section = document.getElementById(sectionId);
+    if (section) section.style.display = 'block';
+}
+
 function hideError() {
     msgError.classList.add('hidden');
 }
@@ -256,7 +107,7 @@ function menu() {
 //function sair(){
   // Remove o token e os dados do usuário logado do localStorage
 //  localStorage.removeItem('token')
-  // Remove o usuário logado do localStorage
+// Remove o usuário logado do localStorage
 //  localStorage.removeItem('userLogado')
   // Redireciona para a página de login
 //  window.location.href = '../html/signin.html'

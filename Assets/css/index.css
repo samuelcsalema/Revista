@@ -1,8 +1,21 @@
-* {
-    padding: 0;
-    text-align: center;
-    margin: 0;
+/* =========================
+   Zerando a definição básica de tudo
+   ========================= */
+
+* { /* Definição importante */
+    margin: 0; /* Tirando margens */
+    padding: 0; /* Espaço 0 */
+    text-align: center; /* Alinhando o texto ao centro*/
 }
+html, body { /* Definição importante */
+    margin: 0; /* Tirando margens */
+    padding: 0; /* Espaço 0 */
+    background-color: #f7f4ed; /* Definindo a cor de fundo */
+}
+
+/* =========================
+   Suporte para Mobile
+   ========================= */
 
 @media (max-width: 600px) {
     .container, .content, section {
@@ -73,26 +86,16 @@
     }
 }
 
-html, body {
-    margin: 0;
-    padding: 0;
-    background-color: #f7f4ed; /* Or your preferred color */
-}
+/* =========================
+   Básico
+   ========================= */
 
-body {
+body { /* Detalhes gerais */
     background-color: #f7f4ed; /* Cor de fundo */ /*ffffff branco. f7f4ed lace. e8d9ed Petal */
-    background-attachment: fixed ;
-    font-family: Georgia, sans-serif;
-    margin: 0;
-    padding: 0;
+    font-family: Georgia, sans-serif; /* Fonte padrão do site */
+    margin: 0; /* Tirando as margens*/
+    padding: 0; /* Espaço 0 */
 }
-
-header {
-    background-color: #cee0f7;
-    text-align: center;
-    color: #000000;
-}
-
 .container {
     background-color: #cee0f7 !important;
     justify-content: center; /* Centralizando a área de texto */
@@ -101,51 +104,82 @@ header {
     color: #000000; /* Cor do texto */
     font-size: 20px;
 }
-
 .content {
-    background-color: #f7f4ed; /* Cor de fundo */ /*ffffff branco. f7f4ed lace. e8d9ed Petal */
-    min-height: 100vh;
+    background-color: #f7f4ed; /*ffffff branco. f7f4ed lace. e8d9ed Petal */
+    min-height: 100vh; /* Cobrindo a tela inteira */
 }
-.topo {
-    background-color: #cee0f7 !important;
+
+/* =========================
+   Cabeçalho
+   ========================= */
+
+header { /* Nome do site */
+    background-color: #cee0f7;
+    text-align: center;
+    color: #000000;
+}
+.topo { /* Área acima do nome */
+    background-color: #cee0f7;
     display: flex; /* Fazendo com que fique em linha */
     justify-content: space-between; /* Espaçamento entre os itens */
     align-items: center; /* Centralizando os itens verticalmente */
     position: relative; /* Posicionando o topo */
 
 }
-/* Três linhas */
-.burgao {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    z-index: 1200;
-    width: 30px;
-    height: 22px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    cursor: pointer;
+.cabecalho {
+    display: flex; /* Cor de fundo do cabeçalho */
+    align-items: center; /* Cor do texto do cabeçalho */
+    justify-content: space-between; /* Espaçamento interno do cabeçalho */
+    text-align: center; /* Centralizando o texto */
+    position: relative; /* Posicionando o cabeçalho */
+    padding: 0 24px; /* Espaçamento interno do cabeçalho */
 }
-.burgao span {
+.cabecalho-vazio { /* Cabeçalho vazio */
+    min-width: 220px; /* Ajuda a centralizar o nome */
+}
+
+/* =========================
+   Ativador do Menu
+   ========================= */
+
+.burgao { /* Configurações gerais das três linhas */
+    position: absolute; /* Afasta das laterais */
+    top: 20px; /* Distância do topo */
+    left: 20px; /* Distância da borda esquerda */
+    height: 22px; /* Distância entre as linhas */
+    z-index: 1200; /* Sobreposição sobre outros elementos */
+    width: 30px; /* Comprimento da linha */
+    display: flex; /* Garante o espaçamento entre as linhas */
+    flex-direction: column; /* Deixa em colunas e não linhas */
+    justify-content: space-between; /* Espaço entre as linhas */
+    cursor: pointer; /* Muda o tipo do cursor quando passar em cima */
+}
+.burgao span { /* As três linhas */
     display: block;
-    height: 4px;
-    width: 100%;
-    background: #000000;
-    border-radius: 2px;
-    transition: 0.3s;
+    height: 4px; /* Largura das linhas */
+    width: 100%; /* Comprimento das linhas */
+    background: #000000; /* Cor */
+    border-radius: 2px; /* Curvatura das bordas */
 }
-/* Todos os botões */
-.botoes {
-    background-color: #cee0f7 !important;
-    display: flex;
+.fixed {
+    position: fixed; /* Deixa o burgao fixo no canto superior esquerdo */
+}
+
+/* =========================
+   Botões
+   ========================= */
+
+.botoes { /* Definições gerais */
+    background-color: #cee0f7 !important; /* Cor do fundo da div dos botões */
+    display: flex; /* Faz com que os botões fiquem alinhados */
     align-items: center;
-    gap: 10px;
-    padding: 4px; /* Alinhando com o burgão */
-    margin-left: auto;
+    gap: 10px; /* Espaço entre os botões */
+    padding-top: 16px; /* Distância do topo */
+    padding-right: 20px; /* Distância da borda direita */
+    margin-left: auto; /* Coloca os botões do lado direito */
 }
-.btn-login {
-    z-index: 1100;
+.btn-login { /* Botão de Login */
+    z-index: 1100; /* Sobrepondo a censura */
     background-color: #cee0f7; /* Cor de fundo do botão */
     border-color: #08264d; /* Cor da borda do botão */
     color: #000000; /* Cor do texto do botão */
@@ -158,64 +192,50 @@ header {
     outline: none; /* Retirando o contorno do botão */
     transition: all .5 ease-out; /* Fazendo com que fique mais claro quando clica */
 }
-.btn-register{
+.btn-register{ /* Botão de registro */
     z-index: 1100;
-    background-color: #cee0f7; /* Cor de fundo do botão */
-    border-color: #08264d; /* Cor da borda do botão */
-    color: #000000; /* Cor do texto do botão */
-    padding: 7px; /* Tamanho do botão */
-    font-weight: bold; /* Deixando o texto em negrito */
-    font-size: 8pt; /* Tamanho do texto */
-    border-radius: 8px; /* Arredondando o botão */
-    cursor: pointer; /* Fazendo com que o mouse mude quando passa em cima do botão */
-    outline: none; /* Retirando o contorno do botão */
-    transition: all .5 ease-out; /* Fazendo com que fique mais claro quando clica */
-    text-decoration: none; /* Retirando o sublinhado do link */
+    background-color: #cee0f7;
+    border-color: #08264d;
+    color: #000000;
+    padding: 7px;
+    font-weight: bold;
+    font-size: 8pt;
+    border-radius: 8px;
+    cursor: pointer;
+    outline: none;
+    transition: all .5 ease-out;
 }
-.btn-search{
-    background-color: #cee0f7; /* Cor de fundo do botão */
-    border-color: #08264d; /* Cor da borda do botão */
-    color: #000000; /* Cor do texto do botão */
-    padding: 7px; /* Tamanho do botão */
-    font-weight: bold; /* Deixando o texto em negrito */
-    font-size: 8pt; /* Tamanho do texto */
-    border-radius: 8px; /* Arredondando o botão */
-    cursor: pointer; /* Fazendo com que o mouse mude quando passa em cima do botão */
-    outline: none; /* Retirando o contorno do botão */
-    transition: all .5 ease-out; /* Fazendo com que fique mais claro quando clica */
+.btn-search{ /* Botão de pesquisa */
+    background-color: #cee0f7;
+    border-color: #08264d;
+    color: #000000;
+    padding: 7px;
+    font-weight: bold;
+    font-size: 8pt;
+    border-radius: 8px;
+    cursor: pointer;
+    outline: none;
+    transition: all .5 ease-out;
     
 }
-.btn-login,
-.btn-register {
-    margin-left: 0; /* Remove margin-left: 96%; */
-    margin-top: 0;  /* Optional: remove margin-top if not needed */
-}
-button:hover {
+button:hover { /* Quando o cursor passa por cima*/
     background-color: #08264d; /* Cor de fundo do botão ao clicar */
     color: #ffffff; /* Cor do texto do botão ao clicar */
 }
 
-/* Barra de pesquisa */
-.cabecalho {
-    display: flex; /* Cor de fundo do cabeçalho */
-    align-items: center; /* Cor do texto do cabeçalho */
-    justify-content: space-between; /* Espaçamento interno do cabeçalho */
-    text-align: center; /* Centralizando o texto */
-    position: relative; /* Posicionando o cabeçalho */
-    padding: 0 24px; /* Espaçamento interno do cabeçalho */
-}
+/* =========================
+   Área de pesquisa
+   ========================= */
+
 .pesquisa {
-    display: flex; /* Fazendo com que fique em linha */
-    background-color: transparent; /* Cor de fundo da barra de pesquisa */
-    text-align: center; /* Centralizando o texto */
-    z-index: 500; /* Colocando em cima de tudo */
-    color: #000000; /* Cor do texto */
+    display: flex; /* Alinha a área e o botão */
     gap: 20px; /* Espaçamento entre de barra de pesquisa e botão */;
-    min-width: 220px; /* Largura mínima da barra de pesquisa */
+    min-width: 260px; /* Largura mínima da barra de pesquisa */
+    max-width: 260px; /* Largura máxima da barra de pesquisa */
 }
 .pesquisa input {
     width: 100%; /* Largura da barra de pesquisa */
-    padding: 3px; /* Tamanho da barra de pesquisa */
+    padding: 3px; /* Altura da barra de pesquisa */
     border-color: #cee0f7; /* Retirando a borda da barra de pesquisa */
     border-radius: 8px; /* Arredondando a barra de pesquisa */
     background-color: #cee0f7; /* Cor de fundo da barra de pesquisa */
@@ -226,126 +246,101 @@ button:hover {
     outline: none; /* Retirando o contorno da barra de pesquisa */
     box-shadow: 0 0 5px #cee0f7; /* Colocando uma sombra na barra de pesquisa */
 }
-/* Cabeçalho */
-.nome-site {
-    position: absolute; /* Posicionando o texto */
-    left: 50%; /* Centralizando o texto */
-    transform: translateX(-50%); /* Centralizando o texto */
-    font-size: 12pt; /* Tamanho do texto */
-    text-align: center; /* Centralizando o texto */
-    color: #000000; /* Cor do texto */
-    white-space: nowrap; /* Impedindo que o texto quebre */
-}
 .espaco-pesquisa{
     justify-content: center; /* Centralizando a área de texto */
 }
-.cabecalho-vazio {
-    min-width: 220px; /* Ajuda a centralizar o nome */
-}
-/* Fundo */
-.censura {
-    min-width: 100%; /* Largura mínima do fundo */
-    min-height: 100%; /* Altura mínima do fundo */
-    z-index: 1000; /* Colocando em cima de tudo */
-    background-color: rgba(255, 255, 255, 0.705); /* Cor de fundo da mensagem de erro */
-    font-size: 25pt;
-    position: fixed;
-    cursor: default; /* Fazendo com que o mouse mude quando passa em cima do fundo */
-}
-/* Botões */
-.coluna-lado {
+
+/* =========================
+   Barra Lateral
+   ========================= */
+
+.coluna-lado { /* Menu lateral */
     position: fixed; /* Posicionando a coluna lateral */
-    z-index: 1001;
-    background-color: #cee0f7;
-    width: 20vw;
+    z-index: 1100; /* Coloca o menu lateral acima de tudo */
+    background-color: #cee0f7; /* Cor do menu */
+    width: 20vw; /* Largura da barra lateral */
     height: 100vh; /* Altura da coluna lateral */
-    max-width: 320px;
-    min-width: 10vh; /* Largura mínima da coluna lateral */
     min-height: 100vh; /* Altura mínima da coluna lateral */
-    transition: transform 0.3s ease; /* Transição suave ao abrir e fechar */
+    transition: transform 0.5s ease; /* Transição suave ao abrir e fechar */
     transform: translateX(-100%); /* Escondendo a coluna lateral */
 }
-.coluna-lado.active {
-    transform: translateX(0);
+.coluna-lado.active { /* Quando menu lateral é ativado */
+    transform: translateX(0); /* Coloca a barra lateral tela */
 }
-.coluna-lado,
-nav ul,
-nav ul li {
+.coluna-lado, nav ul, nav ul li { /* Cor dos botões */
     background-color: #cee0f7;
 }
-nav ul {
-    list-style: none;
-    flex-direction: column; /* Colocando os itens em coluna */
-    display: flex;
-    gap: 0px;
-    padding: 0;
+nav ul { /* Opções de menu */
+    list-style: none; /* Remove a bolinha de lista */
+    gap: 0px; /* Espaço entre os botões */
+    padding: 0; /* Tira o formato quadricular */
 }
-nav ul li {
-    padding: 20px 20px;
-    border-radius: 0px;
+nav ul li { /* Cada opção */
+    padding: 20px 20px; /* Tamanho de cada opção */
     cursor: pointer; /* Fazendo com que o mouse mude quando passa em cima do botão */
     text-align: center; /* Centralizando o texto */
     position: relative; /* Necessário para o hover funcionar corretamente */
-    transition:
-        background-color 1.5s ease,
-        transform 0.6s ease,
-        z-index 0s;
-    z-index: 1;
+    z-index: 1; /* Baixa sobreposição */
+    transition: /* Interações de volta */
+        background-color 1.0s ease, /* Velocidade que a cor muda */
+        transform 0.6s ease; /* Velocidade que o fundo diminui */
 }
-nav ul li a {
-    color: #000000;
-    text-decoration: none; /* Retirando o sublinhado do link */
+nav ul li:hover { /* Interação quando o mouse passa por cima */
+    background-color: #006bf7 !important; /* Cor de fundo do botão ao passar o mouse */
+    transition: background-color 1.0s ease; /* Velocidade que a cor de fundo muda */
+    transform: scale(1.15); /* Quanto aumenta */
+    z-index: 2; /* Se sobrepõe aos outros botões */
 }
-nav ul li:hover {
-    background-color: #cee0f7 !important; /* Cor de fundo do botão ao passar o mouse */
-    transition: background-color 0.5s ease;
-    transform: scale(1.15);
-    z-index: 10; /* Bring to front on hover */
+#espaco-vazio { /* Espaço para o burgao não conflitar com um botão */
+    height: 50px; /* Altura do bloco */
+    background: none; /* Sem fundo */
+    border: none; /* Tira as bordas */
+    pointer-events: none; /* Tira as interações do bloco */
+    margin: 0; /* Tirando margens */
+    padding: 0; /* Tirando o espaçamento interno */
 }
-#espaco-vazio {
-    height: 40px;
-    min-height: 32px;
-    background: none;
-    border: none;
-    pointer-events: none;
-    margin: 0;
-    padding: 0;
+.censura { /* Fundo quando a barra lateral é aberta */
+    min-width: 100%; /* Largura mínima do fundo */
+    min-height: 100%; /* Altura mínima do fundo */
+    z-index: 1000; /* Colocando em cima de tudo */
+    background-color: #ffffffb4; /* Cor do fundo */
+    position: fixed; /* Deixa o filtro fixo */
+    cursor: default; /* Fazendo com que o mouse mude quando passa em cima do fundo */
 }
-/* Erro para parte paga */
-#msgError{
-    text-align: center; /* Centralizando o texto */
-    color: #ff0000; /* Cor do texto */
-    font-size: 25pt;
-}
+
+/* =========================
+   Mensagem de Erro
+   ========================= */
+
+   
 .hidden {
-    display: none !important;
+    display: none !important; /* Esconde a mensagem de erro */
 }
 
-.fixed {
-    position: fixed; /* Posicionando o elemento */
-}
+/* =========================
+   Conteúdo
+   ========================= */
 
-/* Texto */
-#resumo {
+#resumo { /* Resumo */
     color: #0b1957; /* Cor do texto */
     font-size: 12pt; /* Tamanho do texto */
     text-align: justify; /* Centralizando o texto */
     margin: 0 auto; /* Centralizando o texto */
 }
-section {
+section { /* Seção */
     text-align: justify;
     margin: 0 auto; /* Centralizando o texto */
     max-width: 700px; /* Largura máxima do texto */
 }
-section h2 {
-    color: #000000; /* Cor do texto */
-    font-size: 25pt; /* Tamanho do texto */
-    text-align: left; /* Centralizando o texto */
-    margin: 5px auto; /* Centralizando o texto */
+section h2 { /* Título */
+    color: #000000;
+    font-size: 25pt;
+    text-align: left; /* Alinhando o texto na esquerda */
+    margin: 5px auto; /* Ajustando as margens */
     max-width: 700px; /* Largura máxima do texto */
-    margin-top: 25px;
+    margin-top: 25px; /* Espaçamento entre o título e o cabeçalho */
 }
-section p {
+section p { /* Texto */
     text-align: left; /* Centralizando o texto */
     color: #000000 !important; /* Cor do texto */
     font-size: 12pt; /* Tamanho do texto */
@@ -353,28 +348,13 @@ section p {
     max-width: 700px; /* Largura máxima do texto */
     line-height: 1.5; /* Espaçamento entre as linhas */
 }
-#caderno4 h5 {
+h4 { /* Autores */
     font-size: 11px; /* Tamanho do texto */
     text-align: left; /* Centralizando o texto */
     margin-top: 1%;
-}
-/* Modificando display dos autores */
-#autores {
     color: #000000
 }
-#nomes-autores{
+span { /* Nome dos autores */
+    font-size: 11px; /* Tamanho do texto */
     color: #0b1957;
-}
-/* Modificando cor do título dos cadernos */
-section[id^="caderno"] h2 {
-    color: #000000;
-}
-section[id^="home"] h2 {
-    color: #000000;
-}
-section[id^="sobre"] h2 {
-    color: #000000;
-}
-section[id^="contato"] h2 {
-    color: #000000;
 }
