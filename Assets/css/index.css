@@ -101,6 +101,11 @@ html, body { /* Definição importante */
     .titulorevistas {
         max-width: 200px !important;
     }
+    img {
+        display: block !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
 }
 
 /* =========================
@@ -462,10 +467,18 @@ section footer { /* Bibliografia */
     flex-direction: row;
     gap: 172px;
 }
+#anuncio {
+    text-align: center;
+    font-weight: bold;
+    color: #08264d !important;
+}
 .horoscopo {
     text-align: center;
     font-size: 20px;
     margin: 15px 0;
+}
+.horoscopotexto {
+    text-align: justify !important;
 }
 #acesso { /* Acesso da bibliografia */
     text-align: justify; /* Centralizando o texto */
@@ -488,4 +501,12 @@ video { /* Audios */
     padding: 20px;
     display: flex; /* Fazendo com que fique em linha */
     margin: auto; /* Centralizando a caixa */
+}
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    height: 80%;
+    margin: 30px 0 0 15px;
 }
