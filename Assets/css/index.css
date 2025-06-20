@@ -67,6 +67,17 @@ html, body { /* Definição importante */
     margin-top: 2% !important;
     color: #000000 !important;
     }
+    #msgError {
+        display: flex !important;
+        flex-direction: column !important;
+        overflow-x: auto !important;
+        gap: 0px !important;
+    }
+    .oferta { /* Configuração geral dos cards de oferta */
+        width: 80% !important; /* Largura dos cards */
+        margin: auto !important;
+        margin-top: 30px !important;
+    }
 }
 
 /* =========================
