@@ -59,13 +59,13 @@ html, body { /* Definição importante */
         font-size: 30px !important; /* Tamanho */
     }
     section h4, span { /* Autores */
-    font-size: 14px !important; /* Tamanho do texto */
+        font-size: 14px !important; /* Tamanho do texto */
     }
     section h6 { /* Palavras chaves */
-    font-size: 15px !important; /* Tamanho do texto */
-    text-align: left !important; /* Centralizando o texto */
-    margin-top: 2% !important;
-    color: #000000 !important;
+        font-size: 15px !important; /* Tamanho do texto */
+        text-align: left !important; /* Centralizando o texto */
+        margin-top: 2% !important;
+        color: #000000 !important;
     }
     #msgError {
         flex-direction: column !important;
@@ -77,6 +77,29 @@ html, body { /* Definição importante */
         margin: auto !important;
         margin-top: 30px !important;
         margin-bottom: 30px !important;
+    }
+    .revistas {
+        gap: 30px !important;
+        max-width: 100% !important;
+    }
+    .revistas p {
+        width: 50% !important;
+        text-align: justify !important;
+        margin-bottom: 20px !important;
+    }
+    .revistas_nomes_1 {
+        gap: 0 !important;
+    }
+    .revistas_nomes_2 {
+        gap: 20px !important;
+    }
+    .horoscopo {
+        text-align: center !important;
+        font-size: 20px !important;
+        margin: 15px 0 !important;
+    }
+    .titulorevistas {
+        max-width: 200px !important;
     }
 }
 
