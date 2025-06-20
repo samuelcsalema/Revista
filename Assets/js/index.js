@@ -6,6 +6,8 @@ let colunalado = document.querySelector('.coluna-lado');
 let burgao = document.querySelector('.burgao');
 let btnlogin = document.getElementById("btnlogin");
 let permisao = false;
+let touchStartX = 0;
+let touchEndX = 0;
 
 if (userLogado && (userLogado.plano === "Basico" || userLogado.plano === "Pro")) {
     permisao = true;
@@ -134,12 +136,25 @@ function menu() {
     burgao.classList.toggle('fixed');
 }
 
+document.addEventListener('touchstart', function(event) {
+    touchStartX = event.changedTouches[0].screenX;
+}, false);
 
-//function sair(){
-  // Remove o token e os dados do usuário logado do localStorage
-//  localStorage.removeItem('token')
-// Remove o usuário logado do localStorage
-//  localStorage.removeItem('userLogado')
-  // Redireciona para a página de login
-//  window.location.href = '../html/signin.html'
-//}
+document.addEventListener('touchend', function(event) {
+    touchEndX = event.changedTouches[0].screenX;
+    arrastado();
+}, false);
+
+function arrastado() {
+    if (touchEndX - touchStartX > 60) {
+        censura.classList.remove('hidden');
+        colunalado.classList.add('active');
+        burgao.classList.toggle('fixed');
+    }
+}
+
+document.getElementById("id-censura").addEventListener("click", () => {
+    censura.classList.add('hidden');
+    colunalado.classList.remove('active');
+    burgao.classList.remove('fixed');
+});

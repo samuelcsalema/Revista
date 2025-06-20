@@ -50,6 +50,12 @@ html, body { /* Definição importante */
         gap: 4px !important; /* Distância entre os botões */
         padding: 8px !important; /* Alinhando ao topo */
     }
+    .burgao {
+        position: absolute !important; /* On mobile, default is absolute */
+    }
+    .burgao.fixed {
+        position: fixed !important;    /* On mobile, when menu is open, becomes fixed */
+    }
     #resumo, section, section h2 { /* Texto */
         font-size: 1em !important; /* Tamanho da fonte */
         max-width: 100vw !important; /* Largura máxima do texto*/
@@ -171,7 +177,7 @@ header { /* Nome do site */
    ========================= */
 
 .burgao { /* Configurações gerais das três linhas */
-    position: absolute; /* Afasta das laterais */
+    position: fixed; /* Deixa permanente */
     top: 20px; /* Distância do topo */
     left: 20px; /* Distância da borda esquerda */
     height: 22px; /* Distância entre as linhas */
@@ -188,9 +194,6 @@ header { /* Nome do site */
     width: 100%; /* Comprimento das linhas */
     background: #000000; /* Cor */
     border-radius: 2px; /* Curvatura das bordas */
-}
-.fixed {
-    position: fixed; /* Deixa o burgao fixo no canto superior esquerdo */
 }
 
 /* =========================
@@ -509,9 +512,27 @@ video { /* Audios */
 }
 img {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
     width: 80%;
     height: 80%;
     margin: 30px 0 0 15px;
+}
+#qrcode {
+    display: block;
+    width: 60%;
+    height: 60%;
+    margin: 30px 0 0 80px;
+}
+#foto_aline {
+    display: block;
+    width: 40%;
+    height: 40%;
+    padding-top: 30px;
+    margin: auto;
+}
+#foto_marcos {
+    display: block;
+    width: 40%;
+    height: 40%;
+    padding-top: 30px;
+    margin: auto;
 }
