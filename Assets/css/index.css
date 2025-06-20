@@ -68,7 +68,6 @@ html, body { /* Definição importante */
     color: #000000 !important;
     }
     #msgError {
-        display: flex !important;
         flex-direction: column !important;
         overflow-x: auto !important;
         gap: 0px !important;
