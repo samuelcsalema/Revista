@@ -1,21 +1,15 @@
 let msgError = document.querySelector('#msgError'); // Mensagem de erro
 let censura = document.querySelector('.censura');
-let token = false
 let colunalado = document.querySelector('.coluna-lado');
 let burgao = document.querySelector('.burgao');
+let userLogado = JSON.parse(localStorage.getItem('userLogado'));
+let permisao = false;
 
-//if(localStorage.getItem('token') == null){
-//  alert('Você precisa estar logado para acessar essa página')
-//  window.location.href = './Assets/html/signin.html'
-//}
+if (userLogado && (userLogado.plano === "Basico" || userLogado.plano === "Pro")) {
+    permisao = true;
+}
 
-let userLogado = JSON.parse(localStorage.getItem('userLogado')) 
-let logado = document.querySelector('#logado')
-
-
-
-document.addEventListener("DOMContentLoaded", () => {
-    // Conecta o id do nav com o id da main
+document.addEventListener("DOMContentLoaded", () => { // Conecta o id do nav com o id da main
     const navMap = {
 //          Button       Section         
         "btn-home": "home",
@@ -40,9 +34,9 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
     // Parte específica para pago
-    document.getElementById("btn-pago").addEventListener("click", (event) => {
+        document.getElementById("btn-pago").addEventListener("click", (event) => {
         event.preventDefault();
-        if (token == true) {
+        if (permisao == true) {
             msgError.classList.add('hidden'); 
             menu();
             showSection("pago");
@@ -103,6 +97,7 @@ function menu() {
     colunalado.classList.toggle('active');
     burgao.classList.toggle('fixed');
 }
+
 
 //function sair(){
   // Remove o token e os dados do usuário logado do localStorage

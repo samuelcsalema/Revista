@@ -22,6 +22,13 @@ let labelhomem = document.querySelector('#labelhomem') // Altera a linha
 let labelmulher = document.querySelector('#labelmulher') // Altera a linha
 let labeloutro = document.querySelector('#labeloutro') // Altera a linha
 let validGenero = false  // Confirma ou nega se os dados estão corretos
+// Criando gêneros
+let inputsplano = document.querySelectorAll('input[name="plano"]') // Traz todos os inputs de nome plano
+let labelplano = document.querySelector('#labelplano') // Altera a linha
+let labelgratis = document.querySelector('#labelgratis') // Altera a linha
+let labelbasico = document.querySelector('#labelbasico') // Altera a linha
+let labelpro = document.querySelector('#labelpro') // Altera a linha
+let validPlano = false  // Confirma ou nega se os dados estão corretos
 // Criando a senha
 let senha  = document.querySelector('#senha') // Coleta o dado presente nesse campo
 let labelsenha = document.querySelector('#labelsenha') // Altera a linha
@@ -195,10 +202,32 @@ confsenha.addEventListener('keyup', () =>{
         confirmar.innerHTML = '<strong> Confirmar Senha: As senhas conferem </strong>' // Mensagem de acerto
     }
 })
+//Plano
+inputsplano.forEach(input => { // Seleciona todas as opções de plano
+    input.addEventListener('change', () => { // Muda quando o usuário seleciona um plano ou muda sua escolha
+        let planoselecionado = document.querySelector('input[name="plano"]:checked') // Seleciona o plano escolhido
+        if(!planoselecionado) { // Se plano não for selecionado
+            labelplano.style.color = 'red' // Cor da escrita caso o dado esteja errado
+            labelplano.innerHTML = '<strong>Plano *Selecione uma opção</strong>' // Mensagem de auxilio de erro
+            labelgratis.style.color = 'red' // Cor da escrita caso o dado esteja certo
+            labelbasico.style.color = 'red' // Cor da escrita caso o dado esteja certo
+            labelpro.style.color = 'red' // Cor da escrita caso o dado esteja certo
+            validPlano = false // Dado negado
+        } else { // Se plano for selecionado
+            labelplano.style.color = 'green' 
+            labelplano.innerHTML = 'Plano: ' // Categoria do dado aceito
+            labelgratis.style.color = 'green' // Cor da escrita caso o dado esteja certo
+            labelbasico.style.color = 'green' // Cor da escrita caso o dado esteja certo
+            labelpro.style.color = 'green' // Cor da escrita caso o dado esteja certo
+            validPlano = true // Dado aceito
+        }
+    })
+})
 //Definindo o que acontece ao clicar no cadastro
 function cadastrar() {
     let generoselecionado = document.querySelector('input[name="genero"]:checked') // Seleciona o gênero escolhido
-    if(validNome && validUsuario && validSenha && validConfsenha && validIdade && validEmail && validGenero) { // Verifica se todos os campos estão preenchidos corretamente
+    let planoselecionado = document.querySelector('input[name="plano"]:checked')
+    if(validNome && validUsuario && validSenha && validConfsenha && validIdade && validEmail && validGenero && validPlano) { // Verifica se todos os campos estão preenchidos corretamente
         let listaUser = JSON.parse(localStorage.getItem('listaUser') || '[]') // Verifica se a lista de usuários existe
         
         listaUser.push({ // Adiciona os dados do usuário na lista
@@ -207,7 +236,8 @@ function cadastrar() {
             idadeCad: idade.value, // Adiciona a idade
             nomeCad: nome.value, // Adiciona o nome
             senhaCad: senha.value, // Adiciona a senha
-            usuarioCad: usuario.value // Adiciona o usuário
+            usuarioCad: usuario.value, // Adiciona o usuário
+            planoCad: planoselecionado.value // Adiciona o plano
         })
         localStorage.setItem('listaUser', JSON.stringify(listaUser)) // Salva a lista de usuários no localStorage
         msgSucess.setAttribute('style', 'display: block') // Mostra a mensagem de sucesso

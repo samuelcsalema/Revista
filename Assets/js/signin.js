@@ -41,7 +41,8 @@ function entrar(){
     let uservalid = { // Cria as categorias de usuário válido
         nome: null,
         usuario: null,
-        senha: null
+        senha: null,
+        plano: null
     }
     // Criando o armazenamento
     listaUser = JSON.parse(localStorage.getItem('listaUser'))
@@ -54,7 +55,8 @@ function entrar(){
             uservalid = { // Se estiver correto, salva os dados do usuário
                 nome: item.nomeCad,
                 usuario: item.usuarioCad,
-                senha: item.senhaCad
+                senha: item.senhaCad,
+                plano: item.planoCad
             }
         }
     })

@@ -1,14 +1,18 @@
-/* Importando a fonte do Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+/* =========================
+   Zerando a definição básica de tudo
+   ========================= */
 
-/* Formatando */
-* {
+* { /* Definição importante */
     margin: 0; /* Retirando a margem */
     padding: 0; /* Retirando o espaçamento */
-    font-family: 'Roboto', sans-serif; /* Definindo a fonte */
+    font-family: 'Times New Roman', Times, serif; /* Definindo a fonte */
 }
-/* Wallpaper */
-body {
+
+/* =========================
+   Wallpaper
+   ========================= */
+
+body { /* Detalhes gerais */
     background-color: #08264d; /* Cor de fundo */ /*ffffff branco. f7f4ed lace. e8d9ed Petal */
     background-repeat: no-repeat; /* Não repetir a imagem */
     background-size: cover; /* Cobrir toda a tela */
@@ -17,29 +21,34 @@ body {
     margin: 0; /* Retirando a margem */
     padding: 0; /* Retirando o espaçamento */
 }
-/* Tratando o Entrar */
-.container {
+
+/* =========================
+   Estrutura
+   ========================= */
+
+.container {  /* Estrutura geral */
     display: flex; /* Fazendo com que fique em linha */
     justify-content: center; /* Centralizando a área de Cadastro */
     width: 100%; /* Largura da área de Cadastro */
     margin-top: 100px; /* Espaçamento entre o topo e a área de Cadastro */
 }
-/* Fundo da área de Cadastro */
-.card {
+.card { /* Externo */
     background-color: #e9f3ff; /* Cor de fundo da área de Cadastro */
     padding: 30px; /* Espaçamento entre o fundo e a barra de escrever */
     border-radius: 4%; /* Arredondando o fundo */
     box-shadow: 4px 3px 1px 0px #ffffff60; /* Sombras do fundo */
 }
-/* Head do site */
-h1 {
+h1 { /* Head do site */
     text-align: center; /* Centralizando o título */
     margin-bottom: 20px; /* Espaçamento entre o título e a barra de escrever */
     color: #0b1957; /* Cor do texto */
 }
 
-/* Área de digitar Requisitos */
-.label-float input {
+/* =========================
+   Requisitos
+   ========================= */
+
+.label-float input { /* Estrutura para digitar */
     width: 100%; /* Largura da barra de escrever */
     padding: 5px 5px; /* Tamanho da linha de escrever */
     display: inline-block; /* Faz com que fique em linha */
@@ -52,53 +61,26 @@ h1 {
     transition: all .3s ease; /* Velocidade que configura */
     border-radius: 5px; /* Arredondando o fundo */
 }
-
- .genero input {
-    padding: 5px 5px; /* Tamanho da linha de escrever */
-    display: inline-block; /* Faz com que fique em linha */
-    border: 0; /* Retirando a borda */
-    border-bottom: 2px solid #0b1957; /* Cor da linha de escrever */
-    background-color: transparent; /* Cor de fundo da linha de escrever */
-    outline: none; /* Retirando o contorno */
-    font-size: 16px; /* Tamanho da fonte */
-    transition: all .3s ease; /* Velocidade que configura */
-    border-radius: 0; /* Retirando o arredondado */
-}
-
-.genero label {
-    color:#0b1957; /* Cor do texto */
-    transition: color .3s ease; /* Velocidade que configura */
-}
-
-.genero input[type="radio"] {
-    margin-right: 5px; /* Espaçamento entre o texto e a barra de escrever */
-}
-
-/* Texto de Requisitos */
-.label-float {
+.label-float { /* Texto de requisitos */
     position: relative; /* Fazendo com que fique em linha */
     padding-top: 13px; /* Espaçamento entre o texto e a barra de escrever */
     margin-top: 5%; /* Espaçamento entre o título e a barra de escrever */
     margin-bottom: 5%; /* Espaçamento entre a barra de escrever e o botão */
 }
-/* */
-.label-float input:focus{
+.label-float input:focus{ /* Linha de baixo */
     border-bottom: 2px solid #0b1957; /* Cor da linha de escrever ao clicar */
 }
-
-/* Como Requisitos irão se comportar */
-.label-float label {
+.label-float label { /* Texto dos requisitos */
     color: #0b1957; /* Cor do texto */
     pointer-events: none; /* Faz com que não clique no texto */
     position: absolute; /* Fazendo com que fique em linha */
     top: 0; /* Espaçamento entre o texto e a barra de escrever */
     left: 0; /* Espaçamento entre o texto e a barra de escrever */
     margin-top: 13px; /* Espaçamento entre o texto e a barra de escrever */
-    transition: all .3s ease; /* Velocidade que configura */
+    transition: all .5s ease; /* Velocidade que configura */
 }
-/* Especificações do Requisitos ao clicar */
 .label-float input:focus + label,
-.label-float input:valid + label {
+.label-float input:valid + label { /* Especificações do Requisitos ao clicar */
     font-size: 13px; /* Tamanho do texto */
     margin-top: 0; /* Espaçamento entre o texto e a barra de escrever */
     color: solid #0b1957; /* Cor do texto */
@@ -109,8 +91,58 @@ h1 {
     font-size: 12px; /* Tamanho do texto */
     color: solid #0b1957; /* Cor do texto */
 }
-/* Configurando o botão */
-button {
+
+/* =========================
+   Gênero
+   ========================= */
+
+.genero input { /* Gênero */
+    padding: 5px 5px; /* Tamanho da linha de escrever */
+    display: inline-block; /* Faz com que fique em linha */
+    border: 0; /* Retirando a borda */
+    border-bottom: 2px solid #0b1957; /* Cor da linha de escrever */
+    background-color: transparent; /* Cor de fundo da linha de escrever */
+    outline: none; /* Retirando o contorno */
+    font-size: 16px; /* Tamanho da fonte */
+    transition: all .3s ease; /* Velocidade que configura */
+    border-radius: 0; /* Retirando o arredondado */
+}
+.genero label { /* Escrita */
+    color:#0b1957; /* Cor do texto */
+    transition: color .3s ease; /* Velocidade que troca a cor */
+}
+.genero input[type="radio"] { /* Botão e texto */
+    margin-right: 5px; /* Espaçamento entre o texto e a barra de escrever */
+}
+
+/* =========================
+   Assinatura
+   ========================= */
+
+.plano input {  /* Assinatura */
+    padding: 5px 5px; /* Tamanho da linha de escrever */
+    display: inline-block; /* Faz com que fique em linha */
+    border: 0; /* Retirando a borda */
+    border-bottom: 2px solid #0b1957; /* Cor da linha de escrever */
+    background-color: transparent; /* Cor de fundo da linha de escrever */
+    outline: none; /* Retirando o contorno */
+    font-size: 16px; /* Tamanho da fonte */
+    transition: all .3s ease; /* Velocidade que configura */
+    border-radius: 0; /* Retirando o arredondado */
+}
+.plano label { /* Escrita */
+    color:#0b1957; /* Cor do texto */
+    transition: color .3s ease; /* Velocidade que configura */
+}
+.plano input[type="radio"] { /* Botão e texto */
+    margin-right: 5px; /* Espaçamento entre o texto e a barra de escrever */
+}
+
+/* =========================
+   Botão
+   ========================= */
+
+button { /* Configurando o botão */
     background-color: transparent; /* Cor de fundo do botão */
     border-color: #0b1957; /* Cor da borda do botão */
     color: #0b1957; /* Cor do texto do botão */
@@ -123,64 +155,67 @@ button {
     outline: none; /* Retirando o contorno do botão */
     transition: all .5 ease; /* Fazendo com que fique mais claro quando clica */
 }
-
-/* Configurando quando passa no botão*/
-button:hover {
+button:hover { /* Configurando quando passa no botão*/
     background-color: #0b1957; /* Cor de fundo do botão ao passar */
     color: #d2b3db; /* Cor de fundo do botão ao clicar */
 }
-/* Centralizando o botão*/
-.justify-center {
+.justify-center { /* Centralizando o botão*/
     display: flex; /* Fazendo com que fique em linha */
     justify-content: center; /* Centralizando o botão */
 }
-/* Escondendo a área de requisitos da senha*/
-#requisitos_senha {
+
+/* =========================
+   Senha
+   ========================= */
+
+#requisitos_senha { /* Escondendo a área de requisitos da senha*/
     display: none; /* Retirando a área de requisitos */
     margin-top: 7px; /* Espaçamento entre o botão e a área de requisitos */
 }
-/* Mostrando a área de requisitos da senha*/
-#requisitos_senha.visible {
+#requisitos_senha.visible { /* Mostrando a área de requisitos da senha*/
     display: block; /* Mostrando a área de requisitos */
     margin-top: 7px; /* Espaçamento entre o botão e a área de requisitos */
 }
-/* Configurando a área de requisitos da senha*/
-#requisitos_senha ul {
-        list-style: none; /* Retirando os pontos da lista */
-        padding: 7px; /* Espaçamento entre a área de requisitos e a barra de escrever */
+#requisitos_senha ul { /* Tratando o texto */
+    list-style: none; /* Retirando os pontos da lista */
+    padding: 7px; /* Espaçamento entre a área de requisitos e a barra de escrever */
 }
-/* Configurando a área de requisitos da senha*/
-#requisitos_senha li {
-        color: rgb(255, 0, 0); /* Cor do texto */
-        font-size: 12px; /* Tamanho do texto */
-        font-weight: bold; /* Deixando o texto em negrito */
+#requisitos_senha li { /* Texto */
+    color: rgb(255, 0, 0); /* Cor do texto */
+    font-size: 12px; /* Tamanho do texto */
+    font-weight: bold; /* Deixando o texto em negrito */
 }
-/* Configurando a área de requisitos da senha*/
-#requisitos_senha .valid {
+#requisitos_senha .valid { /*  Requisito válido */
     color: rgb(0, 255, 0); /* Cor do texto */
     font-size: 10px; /* Tamanho do texto */
 }
-/* Configurando a área de requisitos da senha*/
-#password-requirements .invalid {
+#password-requirements .invalid { /* Requisito inválido */
     color: rgb(255, 0, 0); /* Cor do texto */
     font-size: 12px; /* Tamanho do texto */
 }
-/* Olhar ou esconder senha */
-.fa-eye {
+
+/* =========================
+   Olho
+   ========================= */
+
+.fa-eye { /* Olhar ou esconder senha */
     position: absolute; /* Fazendo com que fique em linha */
     top: 20px; /* Espaçamento entre o olho e a barra de escrever */
     right: 10px; /* Espaçamento entre o olho e a barra de escrever */
     cursor: pointer; /* Fazendo com que o mouse mude quando passa em cima do olho */
     color: #0b1957; /* Cor do olho */
 }
-/* Mensagem de erro */
-#msgError{
+
+/* =========================
+   Mensagens
+   ========================= */
+
+#msgError{ /* Mensagem de erro */
     text-align: center; /* Centralizando o texto */
     color: #ff0000; /* Cor do texto */
     background-color: transparent; /* Cor de fundo da mensagem de erro */
 }
-/* Mensagem de sucesso */
-#msgSucess{
+#msgSucess{ /* Mensagem de sucesso */
     text-align: center; /* Centralizando o texto */
     color: #00bb00; /* Cor do texto */
     background-color: transparent; /* Cor de fundo da mensagem de sucesso */
