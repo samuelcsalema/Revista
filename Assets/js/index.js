@@ -1,8 +1,10 @@
+let userLogado = JSON.parse(localStorage.getItem('userLogado'));
+let token = localStorage.getItem('token');
 let msgError = document.querySelector('#msgError'); // Mensagem de erro
 let censura = document.querySelector('.censura');
 let colunalado = document.querySelector('.coluna-lado');
 let burgao = document.querySelector('.burgao');
-let userLogado = JSON.parse(localStorage.getItem('userLogado'));
+let btnlogin = document.getElementById("btnlogin");
 let permisao = false;
 
 if (userLogado && (userLogado.plano === "Basico" || userLogado.plano === "Pro")) {
@@ -85,11 +87,45 @@ function hideError() {
     msgError.classList.add('hidden');
 }
 
-function login() {
-    window.location.href = './Assets/html/signin.html'; // Redireciona para a página de login
+if (token) {
+    atualizarbotoes()
+} else {
+    atualizarbotoes()
 }
+
+function login() {
+    let token = localStorage.getItem('token');
+    if (token) {
+        localStorage.removeItem('token')
+        localStorage.removeItem('userLogado')
+        atualizarbotoes();
+    } else { 
+        window.location.href = './Assets/html/signin.html';
+}}
+
 function register() {
-    window.location.href = './Assets/html/signup.html'; // Redireciona para a página de registro
+    window.location.href = './Assets/html/signup.html';
+}
+
+function atualizarbotoes() {
+    let token = localStorage.getItem('token');
+    let userLogado = JSON.parse(localStorage.getItem('userLogado'));
+    if (token && userLogado && userLogado.plano === "Pro") {
+        btnregister.classList.add('hidden');
+        btnlogin.innerHTML = ' Sair ';
+    } else if (token && userLogado && userLogado.plano === "Basico") {
+        btnregister.innerHTML = 'Upgrade ';
+        btnregister.classList.remove('hidden');
+        btnlogin.innerHTML = ' Sair ';
+    } else if (token && userLogado && userLogado.plano === "Gratuito") {
+        btnregister.innerHTML = 'Assinar ';
+        btnregister.classList.remove('hidden');
+        btnlogin.innerHTML = ' Sair ';
+    } else {
+        btnregister.innerHTML = 'Registrar ';
+        btnregister.classList.remove('hidden');
+        btnlogin.innerHTML = ' Login ';
+    }
 }
 
 function menu() {

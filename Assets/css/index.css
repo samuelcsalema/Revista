@@ -50,10 +50,15 @@ html, body { /* Definição importante */
         gap: 4px !important; /* Distância entre os botões */
         padding: 8px !important; /* Alinhando ao topo */
     }
-    #resumo, section p, section h2 { /* Texto */
+    #resumo, section, section h2 { /* Texto */
         font-size: 1em !important; /* Tamanho da fonte */
         max-width: 100vw !important; /* Largura máxima do texto*/
         text-align: left !important; /* Alinhando o texto na esquerda */
+    }
+    #p { /* Texto */
+        font-size: 1em !important; /* Tamanho da fonte */
+        max-width: 100vw !important; /* Largura máxima do texto*/
+        text-align: justify !important; /* Alinhando o texto na esquerda */
     }
     section h2{ /* Título */
         font-size: 30px !important; /* Tamanho */
@@ -201,7 +206,7 @@ header { /* Nome do site */
     padding-right: 20px; /* Distância da borda direita */
     margin-left: auto; /* Coloca os botões do lado direito */
 }
-.btn-login { /* Botão de Login */
+#btnlogin { /* Botão de Login */
     z-index: 1100; /* Sobrepondo a censura */
     background-color: #cee0f7; /* Cor de fundo do botão */
     border-color: #08264d; /* Cor da borda do botão */
@@ -215,7 +220,7 @@ header { /* Nome do site */
     outline: none; /* Retirando o contorno do botão */
     transition: all .5 ease-out; /* Fazendo com que fique mais claro quando clica */
 }
-.btn-register{ /* Botão de registro */
+#btnregister{ /* Botão de registro */
     z-index: 1100;
     background-color: #cee0f7;
     border-color: #08264d;
