@@ -25,6 +25,8 @@ document.addEventListener("DOMContentLoaded", () => { // Conecta o id do nav com
         "btn-caderno6": "caderno6",
         "btn-caderno7": "caderno7",
         "btn-caderno8": "caderno8",
+        "btn-caderno9": "caderno9",
+        "btn-caderno10": "caderno10",
         "btn-sobre": "sobre",
         "btn-contato": "contato"
     };
@@ -51,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => { // Conecta o id do nav com
         }
     });
     // Define a home como padrão
-    showSection("home");
+    showSection("caderno3");
 });
 
 
