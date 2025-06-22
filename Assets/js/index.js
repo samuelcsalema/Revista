@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => { // Conecta o id do nav com
         }
     });
     // Define a home como padrão
-    showSection("caderno3");
+    showSection("home");
 });
 
 
