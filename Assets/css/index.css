@@ -618,3 +618,7 @@ img {
 .subtitulo2 {
     text-align: left;
 }
+.centro {
+    padding: 20px;
+    margin: auto;
+}
