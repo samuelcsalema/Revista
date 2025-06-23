@@ -117,6 +117,9 @@ html, body { /* Definição importante */
         margin-left: auto !important;
         margin-right: auto !important;
     }
+    video {
+        width: 80% !important;
+    }
     #Imagem_Reportagem_Noticia {
     width: 100% !important;}
 }
@@ -527,6 +530,7 @@ video { /* Audios */
     padding: 20px;
     display: flex; /* Fazendo com que fique em linha */
     margin: auto; /* Centralizando a caixa */
+    width: 100%;
 }
 img {
     display: block;
