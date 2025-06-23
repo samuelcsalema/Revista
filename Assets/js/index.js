@@ -160,3 +160,13 @@ document.getElementById("id-censura").addEventListener("click", () => {
     colunalado.classList.remove('active');
     burgao.classList.remove('fixed');
 });
+
+document.querySelectorAll('audio').forEach(audio => {
+    audio.addEventListener('play', function() {
+        document.querySelectorAll('audio').forEach(otherAudio => {
+            if (otherAudio !== audio) {
+                otherAudio.pause();
+            }
+        });
+    });
+});
