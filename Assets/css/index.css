@@ -463,6 +463,15 @@ section footer { /* Bibliografia */
     max-width: 700px; /* Largura máxima do texto */
     line-height: 1.5; /* Espaçamento entre as linhas */
 }
+.colaboradores { /* Colaboradores */
+    font-size: 12px; /* Tamanho do texto */
+    text-align: left; /* Centralizando o texto */
+    margin-top: 1%;
+    color: #000000;
+}
+.nomes-colaborador {
+    font-size: 12px;
+}
 .revistas {
     display: flex;
     flex-direction: row;
@@ -525,7 +534,7 @@ section footer { /* Bibliografia */
     width: 50%;
     box-sizing: border-box;
 }
-#acesso { /* Acesso da bibliografia */
+.acesso { /* Acesso da bibliografia */
     text-align: justify; /* Centralizando o texto */
     color: #000000 !important; /* Cor do texto */
     font-size: 12pt; /* Tamanho do texto */
