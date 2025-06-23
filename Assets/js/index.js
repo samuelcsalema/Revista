@@ -103,6 +103,7 @@ function login() {
         localStorage.removeItem('token')
         localStorage.removeItem('userLogado')
         atualizarbotoes();
+        window.location.href = './index.html'
     } else { 
         window.location.href = './Assets/html/signin.html';
 }}
