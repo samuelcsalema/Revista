@@ -121,7 +121,11 @@ html, body { /* Definição importante */
         width: 80% !important;
     }
     #Imagem_Reportagem_Noticia {
-    width: 100% !important;}
+    width: 100% !important;
+    }
+    .signo {
+        width: 10% !important;
+    }
 }
 
 /* =========================
@@ -472,25 +476,37 @@ section footer { /* Bibliografia */
 .revistas_nomes_1 {
     display: flex;
     flex-direction: row;
-    gap: 160px;
+    gap: 127px;
 }
 .revistas_nomes_2 {
     display: flex;
     flex-direction: row;
-    gap: 172px;
+    gap: 164px;
 }
-#anuncio {
+.anuncio {
     text-align: center;
     font-weight: bold;
     color: #08264d !important;
 }
 .horoscopo {
-    text-align: center;
+    margin: 0;
     font-size: 20px;
-    margin: 15px 0;
+    text-align: center;
 }
 .horoscopotexto {
     text-align: justify !important;
+}
+.signo {
+    width: 5%;
+    object-fit: contain;
+    padding-bottom: 30px;
+}
+.signo_alinhado {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: auto;
 }
 .separacao {
     font-size: 15px;
@@ -621,4 +637,7 @@ img {
 .centro {
     padding: 20px;
     margin: auto;
+}
+.subtitulo3 {
+    text-align: center;
 }
