@@ -27,6 +27,7 @@ document.addEventListener("DOMContentLoaded", () => { // Conecta o id do nav com
         "btn-caderno8": "caderno8",
         "btn-caderno9": "caderno9",
         "btn-caderno10": "caderno10",
+        "btn-caderno11": "caderno11",
         "btn-sobre": "sobre",
         "btn-contato": "contato"
     };
