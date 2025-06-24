@@ -551,7 +551,7 @@ audio { /* Audios */
     display: flex; /* Fazendo com que fique em linha */
     margin: auto; /* Centralizando a caixa */
 }
-video { /* Audios */
+iframe { /* Vídeos */
     padding: 20px;
     display: flex; /* Fazendo com que fique em linha */
     margin: auto; /* Centralizando a caixa */
