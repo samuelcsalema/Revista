@@ -316,7 +316,7 @@ nav ul { /* Opções de menu */
     padding: 0; /* Tira o formato quadricular */
 }
 nav ul li { /* Cada opção */
-    padding: 15px 20px; /* Tamanho de cada opção */
+    padding: 10px 20px; /* Tamanho de cada opção */
     cursor: pointer; /* Fazendo com que o mouse mude quando passa em cima do botão */
     text-align: center; /* Centralizando o texto */
     position: relative; /* Necessário para o hover funcionar corretamente */
