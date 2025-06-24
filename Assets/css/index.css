@@ -37,7 +37,7 @@ html, body { /* Definição importante */
         overflow-x: hidden; /* Impede a barra de rodar lateralmente */
     }
     nav ul li { /* Edição das opções */
-        padding: 12px 8px !important; /* Espaço entre itens */
+        padding: 10px 8px !important; /* Espaço entre itens */
         font-size: 1em !important; /* Tamanho do texto */
     }
     .btn-login, .btn-register, .btn-search { /* Configurando os botões */
@@ -127,7 +127,7 @@ html, body { /* Definição importante */
         width: 10% !important;
     }
     .separacao {
-        justify-content: center !important
+        text-align: justify !important
     }
 }
 
