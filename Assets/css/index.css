@@ -713,3 +713,8 @@ img {
     margin: auto;
     padding: 30px 0;
 }
+#charge {
+    justify-content: center;
+    margin: auto;
+    padding: 20px 0;
+}
