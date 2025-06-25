@@ -555,7 +555,6 @@ iframe { /* Vídeos */
     padding: 20px;
     display: flex; /* Fazendo com que fique em linha */
     margin: auto; /* Centralizando a caixa */
-    width: 100%;
 }
 img {
     display: block;
