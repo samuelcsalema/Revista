@@ -690,6 +690,13 @@ img {
     padding-top: 30px;
     margin: auto;
 }
+.foto_autores {
+    display: block;
+    width: 45%;
+    height: 45%;
+    padding-top: 30px;
+    margin: auto;
+}
 .subtitulo2 {
     text-align: left;
 }
