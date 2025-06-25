@@ -117,7 +117,7 @@ html, body { /* Definição importante */
         margin-left: auto !important;
         margin-right: auto !important;
     }
-    video {
+    iframe {
         width: 80% !important;
     }
     #Imagem_Reportagem_Noticia {
@@ -182,6 +182,26 @@ header { /* Nome do site */
 }
 .cabecalho-vazio { /* Cabeçalho vazio */
     min-width: 220px; /* Ajuda a centralizar o nome */
+}
+.titulo_alinhado {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: auto;
+}
+#nome_site {
+    margin: 0;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.logo {
+    position: static;
+    width: 10%;
+    object-fit: contain;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 16px;
 }
 
 /* =========================
@@ -465,6 +485,11 @@ section footer { /* Bibliografia */
     margin: 20 auto; /* Centralizando o texto */
     max-width: 700px; /* Largura máxima do texto */
     line-height: 1.5; /* Espaçamento entre as linhas */
+}
+address {
+    text-align: left;
+    font-style: normal;
+    font-weight: bold;
 }
 .colaboradores { /* Colaboradores */
     font-size: 12px; /* Tamanho do texto */

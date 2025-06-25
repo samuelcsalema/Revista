@@ -52,7 +52,10 @@
             <!--- Cabeçalho --->
             <div class="cabecalho">
                 <div class="cabecalho-vazio"></div>
-                <h1 id="nome-site">Viva Letras</h1>
+                <div class="titulo_alinhado">
+                    <h1 id="nome_site">Viva Letras</h1>
+                    <img class="logo" src="./Assets/images/Símbolos/Logo.png" alt="Logo">
+                </div>
                 <!--- Área de pesquisa --->
                 <div class="pesquisa">
                     <div class="espaco-pesquisa">
@@ -141,12 +144,14 @@
             <section id="home" style="display:none">
                 <h2> Bem-vindo à Viva Letras! </h2>
                 <p class="texto"> Uma revista que aborda os gêneros textuais em formação em Letras no século XXI, de forma interativa e informativa elaborada pelos alunos do primeiro período de letras de 1/2025 </p>
-                <img id="qrcode" src="./Assets/images/Qr Revista.png" alt="Qr code do site">
+                <img id="qrcode" src="./Assets/images/Símbolos/Qr Revista.png" alt="Qr code do site">
             </section>
             <!--- Cadernos --->
             <section id="caderno1" style="display:none">
+                <h2> Artigo de opiniao </h2>
+                <h3 class="resumo"> O artigo de opinião é um texto em que o autor apresenta e defende seu ponto de vista sobre um tema atual, usando argumentos para convencer o leitor. Com estrutura simples: introdução que apresenta o tema, desenvolvimento com argumentos e dados de apoio, e conclusão que retoma a tese, busca persuadir o leitor por meio de linguagem clara, objetiva e fundamentada. </h3>
                 <h2> Educação Especial: Uma Responsabilidade de Inclusão </h2>
-                <h4 id="autores"> Por: <span class="nomes-autores"> Ana Clara, Keilane Queiroga, Lauana Santos e Laura Ferreira </span> </h4>
+                <address class="autores"> Por: <span class="nomes-autores"> Ana Clara, Keilane Queiroga, Lauana Santos e Laura Ferreira </span> </address>
                 <audio controls>
                     <source src="./Assets/audios/Educação Especial.mp3" type="audio/mpeg">
                     <source src="./Assets/audios/Educação Especial.wav" type="audio/wav">
@@ -185,18 +190,19 @@
                 </p>
                 <h5 class="subtitulo"> Exemplo de elaboração de atividades realizadas para os alunos com necessidades especiais: </h5>
                 <img class="foto_centralizada" src="./Assets/images/Educação_Especial/Eduardo.jpg" alt="Atividade do aluno Eduardo">
-                <h3 class="legenda"> Atividade entregue ao aluno Eduardo com síndrome de down, que atualmente cursa o sétimo ano do Ensino Fundamental 2, mas ainda realiza tarefas para alunos do primeiro ano do Ensino Fundamental 1 </h3>
+                <h3 class="legenda"> Exemplo de atividade que o aluno Eduardo com Síndrome de Down realiza enquanto cursa o sétimo ano do Ensino Fundamental ll. Como pode ser visto na imagem acima, mesmo estando no sétimo ano, ele ainda realiza tarefas para alunos do primeiro ano do Ensino Fundamental l. </h3>
                 <div class="separado">
                     <img class="foto_descentralizada" src="./Assets/images/Educação_Especial/Bernardo_1.jpg" alt="Atividade 1 do aluno Bernardo">
                     <img class="foto_descentralizada" src="./Assets/images/Educação_Especial/Bernardo_2.jpg" alt="Atividade 2 do aluno Bernardo">
                 </div>
-                <h3 class="legenda"> No caso acima, podemos ver os tipos de atividades que são entregues a um aluno com microcefalia, o Bernardo, que atualmente está no quinto ano do Ensino Fundamental 1 </h3>
+                <h3 class="legenda"> No segundo caso acima, podemos ver os tipos de atividades que são entregues ao Bernardo, um aluno com Microcefalia. O garoto cursa atualmente o quinto ano do Ensino Fundamental I. </h3>
                 <div class="separado">
-                    <img class="foto_centralizada" src="./Assets/images/Educação_Especial/Atividade_Ana_1.jpg" alt="Atividade aluno 1">
-                    <img class="foto_centralizada" src="./Assets/images/Educação_Especial/Atividade_Ana_2.jpg" alt="Atividade aluno 2">
+                    <img class="foto_descentralizada" src="./Assets/images/Educação_Especial/Atividade_Ana_1.jpg" alt="Atividade aluno 1">
+                    <img class="foto_descentralizada" src="./Assets/images/Educação_Especial/Atividade_Ana_2.jpg" alt="Atividade aluno 2">
                 </div>
-                <h3 class="legenda"> Enquanto nos deparamos com situações do qual os professores disponibilizam o aluno atividades muito básicas que não atendem o nível deles, há casos como o do Ian, que está no primeiro ano do Ensino Médio, onde os professores não adaptam as atividades para ele, dessa maneira, ele só consegue realizá-las com o auxílio de alguém. </h3>
-                <img class="foto_centralizada" src="./Assets/images/Inclusão.jpg" alt="Símbolo oficial da inclusão">
+                <h3 class="legenda"> Enquanto nos deparamos com situações do qual os professores disponibilizam ao aluno atividades muito básicas que não atendem o nível deles, há casos como o do Ian, que está no primeiro ano do Ensino Médio, e os professores não adaptam as atividades para ele. Dessa maneira, ele só consegue realizá-las com o auxílio de alguém. </h3>
+                <img class="foto_centralizada" src="./Assets/images/Símbolos/Inclusão.jpg" alt="Símbolo oficial da inclusão">
+                <div class="breakline"></div>
                 <footer class="texto">
                     <h5 class="subtitulo"> Bibliografia </h5>
                     FERREIRA, F. Educação inclusiva: o que é e qual é o papel da escola? PROESC, 2018. <br> <br>
@@ -219,7 +225,7 @@
             </section>
             <section id="caderno2" style="display:none">
                 <h2> Reportagem Jornalística </h2>
-                <h4 class="autores"> Por: <span class="nomes-autores"> Marcos Paulo, Viviane Resende </span></h4>
+                <address class="autores"> Por: <span class="nomes-autores"> Marcos Paulo, Viviane Resende </span></address>
                 <h5 class="subtitulo"> Professores Acuados e Covardia em Alta </h5>
                 <img id="Imagem_Reportagem_Noticia" src="./Assets/images/Jornalismo_de_Investigação/Reportagem, Noticia.jpg" alt="Imagem com notícia">
                 <audio controls>
@@ -257,8 +263,8 @@
                     <source src="./Assets/audios/" type="audio/mpeg">
                     <source src="./Assets/audios/" type="audio/wav">
                 </audio>
-                <h4 class="autores"> Por: <span class="nomes-autores"> Érika Viana, Gilton Pereira, Karoline Paula, Luciane Iris, Lucilene Guimarães e Vinícius Maia </span></h4>
-                <h4 class="colaboradores"> Colaboradores: <span class="nomes-colaborador"> Ana Clara, Luciane Iris e Marina Santos </span></h4>
+                <address class="autores"> Por: <span class="nomes-autores"> Luciane Iris e Lucilene Guimarães</span></address>
+                <h4 class="colaboradores"> Colaboradores: <span class="nomes-colaborador"> Ana Clara, Érika Viana, Gilton Pereira, Karoline Paula e Vinícius Maia  </span></h4>
                 <h5 class="subtitulo"> Entrevista com a professora e cantora Lislie </h5>
                 <iframe width="600" height="400" 
                     src="https://www.youtube.com/embed/5GCiE0FCKqQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
@@ -305,7 +311,7 @@
                 <p class="texto"> Todavia, diante da riqueza cultural do conteúdo da disciplina e sabendo de sua importância para a formação humanística dos docentes em Letras, do ponto de vista de inclusão, de integração social e de conservação da cultura indígena e seu meio ambiente, tão necessários no século XXI e às futuras gerações, escolhemos entrevistar o professor Rafael, que nos concedeu, gentilmente, momentos de grande aprendizado. </p>
                 <p class="texto"> Já, quanto à entrevista, propriamente dita, logo que chegamos no local combinado, encontramos o professor descontraído tocando a música “Desencantando”, que compõe uma das faixas de seu disco do grupo Libertália. Essa música foi composta por ele e, é claro: contém influências indígenas! </p>
                 <p class="texto"> Confira agora a entrevista com Dr. Rafael Fares e como seu trabalho pode contribuir para a formação docente e prática em Letras no século XXI: </p>
-                <h5 class="subtitulo2"> Transcrição da Entrevista </h5>
+                <h5 class="subtitulo2"> Transcrição da Entrevista: </h5>
                 <h5 class="separacao"> 1 - Porque o senhor escolheu a literatura indígena e porque a língua do povo Maxacali foi sua escolha de objeto de estudo? </h5>
                 <p class="texto"> “Maxacali é o único povo em Minas que têm uma língua em uso. Participei na UFMG, como bolsista do projeto FIEI de formação intercultural de professores indígenas e integrei a equipe que trabalhava com os Maxacali, no qual foi proposto ser desenvolvido um livro de saúde, chamado CURAR, com a finalidade de informar como o indígena deveria ser assistido, caso precisasse de atendimento médico.” </p>
                 <h5 class="separacao"> 2 - Nesse contexto, a língua indígena influenciou seu trabalho? </h5>
@@ -334,9 +340,8 @@
                 <div class="breakline"></div>
                 <h5 class="subtitulo"> Entrevista com a Professora Perpétua Reis </h5>
                 <img class="foto_centralizada" src="./Assets/images/Cultura_e_Inclusão/Perpétua.jpg" alt="Foto de: Professora Perpétua Reis"> <br> <br>
-                <p class="texto"> Ela (Profa. Perpétua Reis) é mestre em Literaturas de Expressão Inglesa pela UFMG e possui licenciatura em Língua Inglesa, Língua Espanhola e respectivas Literaturas. Atualmente é docente no Curso de Letras, na UEMG Universidade do Estado de Minas Gerais, Unidade Ibirité, onde leciona Língua Inglesa e Literatura. Desenvolve projetos de extensão com ensino das línguas Inglesa e Espanhola, em parceria com a FHA Fundação Helena Antipoff, formando professores para trabalhar com adultos, adolescentes e crianças desde a Educação Infantil. Também oferece aulas de Espanhol online por meio de um projeto de extensão, lendo clássicos da língua espanhola. Recebeu dois prêmios de literatura em 2021, tendo publicado o livro: Contos de Cantos de Minas, no formato ebook com mais cinco amigas e o outro 2024, quando publicou o livro de poesia, Respiro de Alma e Coração, livro físico. Os PDFs de ambos os livros serão colocados para download gratuito. </p>
-                <h5 class="subtitulo2"> Transcrição da Entrevista </h5>
-                <h5 class="subtitulo2"> Transcrição da Entrevista </h5>
+                <p class="texto"> A professora Perpétua Reis é mestre em Literaturas de Expressão Inglesa pela UFMG e possui licenciatura em Língua Inglesa, Língua Espanhola e respectivas Literaturas. Atualmente é docente no Curso de Letras, na UEMG Universidade do Estado de Minas Gerais, Unidade Ibirité, onde leciona Língua Inglesa e Literatura. Desenvolve projetos de extensão com ensino das línguas Inglesa e Espanhola, em parceria com a FHA Fundação Helena Antipoff, formando professores para trabalhar com adultos, adolescentes e crianças desde a Educação Infantil. Também oferece aulas de Espanhol online por meio de um projeto de extensão, lendo clássicos da língua espanhola. Recebeu dois prêmios de literatura em 2021, tendo publicado o livro: Contos de Cantos de Minas, no formato ebook com mais cinco amigas e o outro 2024, quando publicou o livro de poesia, Respiro de Alma e Coração, livro físico. Os PDFs de ambos os livros serão colocados para download gratuito. </p>
+                <h5 class="subtitulo2"> Transcrição da Entrevista: </h5>
                 <h5 class="separacao"> 1 - A Sra. conhece a história do surgimento do curso de Letras na UEMG e poderia nos contar um pouco sobre isso? </h5>
                 <p class="texto"> O início real foi em 1955, com a criação do ISER Instituto Superior de Educação Rural, visando a formação de professores para atender às necessidades de então. Depois com a criação ISEAT Instituto Superior Anísio Teixeira, da Fundação Helena Antipoff, em 2001, nasceu o curso de Letras juntamente com os cursos de Pedagogia, Educação Física, Matemática e Ciências Biológicas, honrando a vocação para a formação de professores da fundadora, Helena Antipoff. Em 2010 o ISEAT foi estadualizado, dois anos depois a FHA fez o concurso e em 2013 a UEMG encampou todos os cursos superiores do ISEAT/FHA, passando a ser denominada UEMG Unidade Ibirité. Aqui está de forma bem resumida. </p>
                 <h5 class="separacao"> 2 - Como a senhora aborda gêneros textuais com os estudantes do Curso de Letras? </h5>
@@ -392,7 +397,7 @@
             <section id="caderno4" style="display:none">
                 <h2> Letranda Inquieta </h2>
                 <p class="texto"> Uma estagiária de Letras compartilha sua experiência de como um ensino dinâmico acendeu a chama da aprendizagem em uma sala de aula. Em um cenário desafiador na rede pública de ensino, se acende a chama da esperança quando encontramos educadores comprometidos e apaixonados, transformando a sala de aula em um lugar que inspira e impulsiona o futuro de cada estudante. </p>
-                <h4 class="autores"> Por: <span class="nomes-autores"> Aline Pereira </span></h4>
+                <address class="autores"> Por: <span class="nomes-autores"> Aline Pereira </span></address>
                 <h4 class="colaboradores"> Colaboradores: <span class="nomes-colaborador"> Ana Clara </span></h4>
                 <audio controls>
                     <source src="./Assets/audios/Letrando Inquieta.mp3" type="audio/mpeg">
@@ -427,7 +432,7 @@
                 <p class="texto"> Mas o Brasil é assim! <br> Ouço muito, ultimamente. <br> Não é não. <br> Penso calada. <br> Volto à minha meninice, <br> “Somos borboletas bonitinhas <br> batendo asas em flores”… <br> Crianças cantando e bailando em seus vestidinhos verdes, amarelos, azuis e brancos. <br> Formatura da escola primária, <br> área rural. <br> A professora “leiga” Dona Ivah, <br> olhos brilhantes, dever cumprido. <br> Mestra, e mais um pouco de tudo, que mudou a realidade de tantos. <br> Penso nos professores comprometidos, apaixonados. <br> Que nadam contra a corrente <br> nesse Brasil afora, <br> sem desistir. <br> Que acreditam na Educação <br> Ainda que sem apoio. <br> Brasil que conheço mais. <br> Das músicas geniais. <br> E os hinos? <br> Do Nacional ao do Galo, <br> Obras primas. <br> E corpos em movimento, <br> Danças de todo tipo. <br> Livros que fazem gostar de ler. <br> Poemas emocionantes. <br> Filmes que retratam a vida, sob um olhar delicado. <br> E essa gente linda de se olhar de tão colorida que é. <br> Que tira leite de pedra, <br> sem perder o humor. <br> Povo encantador que acolhe o mundo. <br> E quando não tem, inventa. <br> E cria, e transforma e faz acontecer. <br> E pinta e borda. <br> Que faz comida boa. <br> Não pode ouvir uma música e começa a se mexer. <br> E as matas, os bichos, as montanhas, as águas… <br> Ah, o canto dos nossos pássaros, únicos. <br> Brasil, o gigante abençoado por Deus. <br> Olavo Bilac, eu te amo! </p>
                 <img id="Ivah_Silveira" src="./Assets/images/Generos_Textuais/Imagem_Generos_Textuais.png" alt="Ivah Silveira Godinho, dando aula na escola rural, localidade de Cachoeirinha"> <br>
                 <h3 class="legenda"> Ivah Silveira Godinho, dando aula na escola rural, localidade de Cachoeirinha//MG. Foto tirada em 1962. </h3> <br>
-                <h4 class="autores"> Por: <span class="nomes-autores"> Maria da Conceição Godinho </span></h4>
+                <address class="autores"> Por: <span class="nomes-autores"> Maria da Conceição Godinho </span></address>
                 <div class="breakline"></div>
                 <h5 class="subtitulo2"> Jingle </h5>
                 <h5 class="subtitulo"> Vem pra “Viva Letras” </h5>
@@ -436,32 +441,32 @@
                     <source src="./Assets/audios/Jingle.wav" type="audio/wav">
                 </audio>
                 <p class="texto"> Tem palavra, tem paixão, <br> cada letra é emoção. <br> É mais que aprender, <br> é descobrir. <br> Um mundo novo vai surgir. <br> Vem prá cá, vem pra cá, <br> Aqui todos têm lugar, <br> Viva Letras, Viva Letras <br> Você vai se apaixonar. </p>
-                <h4 class="autores"> Letra Por: <span class="nomes-autores"> Maria da Conceição Godinho / Davi Godinho Ferreira </span></h4>
-                <h4 class="autores"> Música Por: <span class="nomes-autores"> Davi Godinho Ferreira </span></h4>
+                <address class="autores"> Letra Por: <span class="nomes-autores"> Maria da Conceição Godinho / Davi Godinho Ferreira </span></address>
+                <address class="autores"> Música Por: <span class="nomes-autores"> Davi Godinho Ferreira </span></address>
                 <div class="breakline"></div>
                 <h5 class="subtitulo"> Rap da Educação </h5>
                 <p class="texto"> Somos a galera da revista Viva Letras <br> E viemos prá cantar sobre a nossa vocação <br> Preconceito social ou intelectual <br> Foi o mundo que inventou <br> E nas aulas que daremos <br> Isso não terá lugar <br> Diversidade é legal e muito mais interessante <br> Nosso ensino quer chegar a toda gente que vier <br> De toda cor, raça, credo e toda forma de amar <br> Afinal, educação é pra todo cidadão <br> E pro mundo melhorar <br> Faremos diferença  <br> Com respeito e compromisso <br> Criar oportunidades <br> E esse é nosso recado: <br> Valor de verdade <br> é trocar conhecimento <br> Entregando o coração </p>
-                <h4 class="autores"> Por: <span class="nomes-autores"> Maria da Conceição Godinho </span></h4>
+                <address class="autores"> Por: <span class="nomes-autores"> Maria da Conceição Godinho </span></address>
                 <div class="breakline"></div>
                 <h5 class="subtitulo2"> Slam </h5>
                 <h5 class="subtitulo"> Resistência </h5>
                 <p class="texto"> Com licença, autoridade. O que é valor para senhor? <br> Favorece os “chegado”, enquanto o ensino público é banalizado? <br> Em vez de políticas públicas, cria “auxílios”. E a desigualdade vai crescendo, as escolas públicas se deteriorando. Alunos dividem livros didáticos, pois não tem pra todo mundo. Instalações precárias, abandono. <br> E o professor no ensino público, segue. Esquecido. <br> A profissão que forma cidadãos, desprestigiada. <br> Ainda assim, assume seus diversos papéis. Educador. E ao mesmo tempo pai, mãe, conselheiro, assistente social. <br> Dia desses, ouvi de um professor: a gente faz de tudo. E infelizmente, o que menos temos feito é ensinar. Desamparo. Impotência. Frustração. <br> Mas não se engane autoridade! <br> A brasa não se apagou. E já se vislumbra uma pequena chama. Um movimento sutil das mentes de um povo que nunca deixou de pensar. </p>
-                <h4 class="autores"> Por: <span class="nomes-autores"> Maria da Conceição Godinho </span></h4>
+                <address class="autores"> Por: <span class="nomes-autores"> Maria da Conceição Godinho </span></address>
                 <div class="breakline"></div>
                 <h5 class="subtitulo"> Oralidade </h5>
                 <p class="texto"> A oralidade na formação docente se faz muito importante, pois é um dos recursos mais utilizados durante todo o curso de formação e também após. A oralidade, em si, é a prática da língua de forma informal por meio de produção sonora. É um gênero textual apresentado em várias formas, como gestos, expressões faciais e movimentos corporais. É um meio fundamental de interação, comunicação e construção de conhecimento. Através de debates, entrevistas, seminários e outros, contribui para a formação de críticos, leitores e docentes criativos para inserir a oralidade em sala de aula. Ela deve ser incluída, não só na teoria como na prática também. Na formação docente, sendo um meio de interação e comunicação para as relações humanas, permite aos estudantes organizarem seus conhecimentos, além de facilitar o acesso a diversos círculos sociais, além de introduzir oralidade de outras línguas, quando possível. </p>
-                <h4 class="autores"> Por: <span class="nomes-autores"> Maria Aparecida </span></h4>
+                <address class="autores"> Por: <span class="nomes-autores"> Maria Aparecida </span></address>
                 <h4 class="colaboradores"> Colaboradores: <span class="nomes-colaborador"> Gilton Pereira, Luciane Iris </span></h4>
                 <div class="breakline"></div>
                 <h5 class="subtitulo2"> Poema </h5>
                 <h5 class="subtitulo"> Sonho </h5>
                 <p class="texto"> Me prendo em um medo, <br> na angústia de conseguir ou desistir. <br> O futuro desconhecido que me espera... <br> Amo imaginar estar lá. <br> <br> É algo que está no meu DNA,<br> uma loucura de sonhar, de imaginar<br> um lugar onde não querem ficar... <br> Mas eu preciso... é o meu lugar. <br> <br> Ensinar, ouvir, cantar, dançar, <br> amar, sorrir e pular. <br> Não imagino outro lugar, <br> a não ser na sala de aula. </p>
-                <h4 class="autores"> Por: <span class="nomes-autores"> Keilane Queiroga </span></h4>
+                <address class="autores"> Por: <span class="nomes-autores"> Keilane Queiroga </span></address>
                 <div class="breakline"></div>
                 <h5 class="subtitulo2"> Crônica </h5>
                 <h5 class="subtitulo"> Flores Diárias </h5> 
                 <p class="texto"> Fabiana respira fundo e entra na sala de aula. Com uma das mãos, faz o sinal da cruz. <br> <br> — O que é isso, professora? <br> — Tô pedindo proteção pra Deus! <br> <br> Afinal, ela nunca sabe o que a espera. Assim têm sido os dias de Fabiana nas turmas de sétimo e oitavo ano, lidando com alunos que estão em seu momento de florescer. Mas nem tudo é um mar de rosas: às vezes, eles acabam machucando-a com seus espinhos. A experiência não tem sido fácil. <br> <br> O diário de bordo virou quase um diário pessoal — “um desabafo para os professores”, relata a docente. Registros como desaforos, desenhos inapropriados nas cadeiras e até mesmo “beijinhos” sarcásticos são feitos no diário. E Fabiana, que nasceu para ser professora, diariamente lida com a ausência do respeito que deveria vir de casa para as salas de aula. É ouvindo comentários como os de um adolescente, que foi seu aluno na educação infantil chamando-a de “vadia” no sétimo ano, que ela conclui: “o respeito tem se perdido no caminho”. <br> <br> Entretanto, em meio ao caos, existe uma esperança: o amor. Sua paixão pela música a levou ao curso de Letras na UEMG, em 2013, e essa mesma paixão mudou completamente a visão dos alunos com relação à língua inglesa. Esse amor pela docência, o desejo de fazer a diferença e mudar a vida do aluno, é que transforma tudo. <br> <br> “Você tem que olhar o menino na alma pra dar aula.” <br> <br> A arte de lecionar pode até não ser fácil. Afinal, não basta que o professor seja um transmissor de conteúdo, mas sim um transmissor de alma. E, no final, você percebe que tudo valeu a pena, quando os espinhos caem e as flores crescem por completo. </p>
-                <h4 class="autores"> Por: <span class="nomes-autores"> Karoline Paula e Keilane Queiroga </span></h4>
+                <address class="autores"> Por: <span class="nomes-autores"> Karoline Paula e Keilane Queiroga </span></address>
                 <div class="breakline"></div>
                 <h2 class="titulo"> Autoras: </h2>
                 <div class="alinhado">
@@ -485,7 +490,7 @@
                 <p class="texto"> 1 colher de sopa de habilidade de comunicação <br> 2 xícaras de busca pelo conhecimento 1 xícara de criatividade <br> 1 colher de sopa de envolvimento no processo educativo <br> 2 colheres de sopa de participação em metodologias ativas </p> <br><br>
                 <p class="texto"> <strong> Modo de preparo: </strong> </p>
                 <p class="texto"> Misture todos os ingredientes com dedicação e curiosidade. Mexa bem até formar uma massa consistente de interesse e autonomia. Ao final, acrescente ½ xícara de tecnologia como ferramenta auxiliar no processo educativo. Finalize com uma pitada generosa de responsabilidade na aprendizagem. Leve ao forno da rotina escolar por alguns meses, e logo você verá um aluno que busca metas e conhecimento, enquanto as notas surgem como consequência natural desse preparo. </p>
-                <h4 class="autores"> Por: <span class="nomes-autores"> Maria Aparecida da Silva </span></h4>
+                <address class="autores"> Por: <span class="nomes-autores"> Maria Aparecida da Silva </span></address>
                 <div class="breakline"></div>
                 <h5 class="subtitulo"> Receita de um bom Professor </h5>
                 <p class="texto"> Vou ensinar uma receita perfeita para todos que vão começa a lecionar. <br> Tenho certeza que você, futuro professor, vai amar. </p> <br><br>
@@ -493,10 +498,10 @@
                 <p class="texto"> <strong> Modo de preparo: </strong> </p>
                 <p class="texto"> Despeje a Paciência em um recipiente e misture com Empatia, depois reserve. <br> Em outra vasilha, misture Conhecimento do Conteúdo com Autoridade e sove até ficar firme. <br> Dissolva a massa de Autoridade e Conhecimento do Conteúdo na mistura de Paciência com Empatia. Espere a massa dissolver e depois jogue colheres de Didática Variada e as colheres de Criatividade e a Ética. <br> Misture tudo até virar uma massa firme, mas maleável. Caso fique muito dura, acrescente mais Paciência (é sempre bom ter de sobra) até ficar na consistência certa. <br> Despeje em uma forma de Material de Qualidade, e se desejar, coloque um pouco mais de Paciência por cima da massa para dar aquele toque especial, já que paciência é sempre bom. Leve ao forno por duas horas. <br> <strong> Rendimento: </strong> serve vários alunos, e dependendo da necessidade deles, a quantidade dos ingredientes pode aumentar (principalmente Paciência). <br> <strong> Importante: </strong> é sempre bom estar em uma cozinha com acesso a bons instrumentos de trabalho, e sempre procurar aprender mais sobre os conteúdos e sobre essas receitas. Autoridade é muito importante, mas o exagero pode desandar a sua receita, e isso é muito desagradável, não é mesmo? </p> <br>
                 <p class="texto"> Faça essa receita de dar água na boca e aproveite bastante. </p>
-                <h4 class="autores"> Por: <span class="nomes-autores"> Emily Valentin </span></h4>
+                <address class="autores"> Por: <span class="nomes-autores"> Emily Valentin </span></address>
                 <div class="breakline"></div>
                 <img class="foto_centralizada" src="./Assets/images/Receita.jpg" alt="Charge de receita">
-                <h4 class="autores"> Por: <span class="nomes-autores"> Emily Valentin </span></h4>
+                <address class="autores"> Por: <span class="nomes-autores"> Emily Valentin </span></address>
                 <div class="breakline"></div>
                 <h2 class="titulo"> Autoras: </h2>
                 <div class="alinhado">
@@ -506,7 +511,7 @@
             </section >
             <section id="caderno7" style="display:none">
                 <h2> Você Sabia? </h2>
-                <h4 class="autores"> Por: <span class="nomes-autores"> Emily Valentin, Karoline Paula e Lauana Santos </span></h4> <br>
+                <address class="autores"> Por: <span class="nomes-autores"> Emily Valentin, Karoline Paula e Lauana Santos </span></address> <br>
                 <audio controls>
                     <source src="./Assets/audios/Infografico e Curiosidades.mp3" type="audio/mpeg">
                     <source src="./Assets/audios/Infografico e Curiosidades.wav" type="audio/wav">
@@ -522,7 +527,7 @@
                 <h5 class="subtitulo"> Sobre o curso de Letras </h5>
                 <p class="texto"> Antes de receber o nome “Letras”, o curso era intitulado como: “Filosofia, Ciências e Letras”, pois tinha como foco a erudição e o conhecimento geral, sem se concentrar exclusivamente nas diferentes dimensões da linguagem. Hoje, o curso tem como símbolo a flor de lótus, cujas pétalas representam as três principais áreas do conhecimento trabalhadas ao longo do curso: gramática, linguística e literatura. Desde sua criação, o curso foi pensado para formar uma nova elite intelectual, inspirada nos moldes educacionais dos países mais desenvolvidos do mundo. Inicialmente, era voltado ao estudo das línguas clássicas e das literaturas europeias, o que o tornava bastante elitizado. No entanto, mesmo em um contexto de desigualdade de acesso à educação, o curso de Letras foi um dos primeiros a ter um público feminino como maioria entre os estudantes. </p>
                 <p class="texto"> Muitos desconhecem, mas os profissionais formados em Letras podem atuar em diversas áreas além da educação, como tradução e interpretação, revisão e edição de textos, produção de conteúdo, assessoria linguística, gestão cultural e pesquisa acadêmica. Trata-se de um curso com grande amplitude profissional, ideal para pessoas com diferentes interesses, que vão além da licenciatura. </p> <br>
-                <img class="foto_centralizada" src="./Assets/images/Letras.jpg" alt="Símbolo do curso de Letras">
+                <img class="foto_centralizada" src="./Assets/images/Símbolos/Letras.jpg" alt="Símbolo do curso de Letras">
                 <div class="breakline"></div>
                 <h5 class="subtitulo"> Fique ligado! </h5>
                 <p class="texto"> • Com a implementação do Pé-de-Meia Licenciatura, as inscrições em cursos presenciais de licenciatura aumentaram. Anteriormente, a evasão nesses cursos havia se tornado alarmante. Será que, finalmente, os professores estão no caminho para serem valorizados? </p>
@@ -544,7 +549,7 @@
             </section>
             <section id="caderno8" style="display: none">
                 <h2> Pencil Punch </h2>
-                <h4 class="autores"> Por: <span class="nomes-autores">  </span></h4>
+                <address class="autores"> Por: <span class="nomes-autores">  </span></address>
                 <audio controls>
                     <source src="./Assets/audios/" type="audio/mpeg">
                     <source src="./Assets/audios/" type="audio/wav">
@@ -577,7 +582,7 @@
                     <source src="./Assets/audios/Variedades.mp3" type="audio/mpeg">
                     <source src="./Assets/audios/Variedades.wav" type="audio/wav">
                 </audio>
-                <h4 class="autores"> Por: <span class="nomes-autores"> Marcos Paulo </span></h4>
+                <address class="autores"> Por: <span class="nomes-autores"> Marcos Paulo </span></address>
                 <h5 class="subtitulo"> Resumo das Novelas da Semana </h5>
                 <div class="revistas_nomes_1">
 <!--- Título 1 ---> <h6 class="titulorevistas"> O Cravo e a Professora Rosa: </h6>
@@ -635,7 +640,7 @@
                     <source src="./Assets/audios/Nota de Pesar.mp3" type="audio/mpeg">
                     <source src="./Assets/audios/Nota de Pesar.wav" type="audio/wav">
                 </audio>
-                <h4 class="autores"> Por: <span class="nomes-autores"> Gilton Pereira </span></h4>
+                <address class="autores"> Por: <span class="nomes-autores"> Gilton Pereira </span></address>
                 <h4 class="colaboradores"> Colaboradores: <span class="nomes-colaborador"> Luciane Iris </span></h4>
                 <img id="evanildo" src="./Assets/images/Evanildo Bechara.png" alt="Foto de: Evanildo Bechara">
                 <p class="texto"> No dia 22 de maio de 2025, faleceu no Rio de Janeiro, aos 97 anos, o professor e gramático Evanildo Bechara, um dos maiores nomes no estudo da língua portuguesa no Brasil. Como estudantes e futuros professores, lamentamos essa perda e deixamos aqui nossa homenagem pela sua enorme contribuição à educação e à pesquisa linguística. Seu legado continua vivo! </p>
@@ -672,7 +677,7 @@
                     <source src="./Assets/audios/Agradecimentos.mp3" type="audio/mpeg">
                     <source src="./Assets/audios/Agradecimentos.wav" type="audio/wav">
                 </audio>
-                <h4 class="autores"> Por: <span class="nomes-autores"> Marcos Paulo </span></h4>
+                <address class="autores"> Por: <span class="nomes-autores"> Marcos Paulo </span></address>
                 <p class="texto">  São 04 horas da manhã. Eliane, professora de Português da rede pública de ensino desperta. Sai do banho e já arruma as coisas. Precisa estar às 07 horas em sala de aula. Pega a condução cheia, se escorando para não cair. Não há lugar para assentar. Vai ser uma viagem longa. Duas horas para atravessar a cidade e torcer para chegar a tempo de pegar a balsa e atravessar o rio que separa seu caminho da escola. Um adolescente se levanta para descer na próxima parada, e Eliane enfim se assenta com todo o peso dos braços e da bolsa cheia de livros e atividades para seus alunos. </p>
                 <p class="texto"> Ela encosta a cabeça no vidro e observa as paisagens conhecidas por seus olhos cansados e sonolentos. O frio que acomete a cidade parece ser bem mais forte quando ela observa algumas pessoas em situação de rua, apertando-se em volta de uma fogueira para disfarçarem o frio intenso que sentem. Eles não têm cobertores. Logo se lembra de um colega engenheiro que dizia: “eles estão assim porque querem. Todos têm a mesma oportunidade!”. Não! Nem todos tiveram a mesma oportunidade, diz a si mesma. </p>
                 <p class="texto"> Lembra-se de uma música que dizia: “Quando tiver 60 anos, espero que meus olhos funcionem bem. E ao estarmos em um semáforo, que não seja pra pedir dinheiro, mas para dar abraços, distribuir adesivos dizendo: “é natal!” o Rei nasceu e um cobertor também salva”. </p>
@@ -733,7 +738,7 @@
                     <h3 class="legenda"> Perpétua </h3>
                 </div>
                 <img class="foto_centralizada" src="./Assets/images/David.jpg" alt="Imagem de David">
-                <h3 class="legenda"> David Godinho </h3>
+                <h3 class="legenda"> David Godinho Ferreira - cursa o 2ºano do Ensino Médio na Escola Estadual João Felipe da Rocha - Nova Lima </h3>
             </section>
         </main>
     </div>
