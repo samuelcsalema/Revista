@@ -552,16 +552,31 @@ address {
     color: #000000;
     padding-bottom: 10px;
 }
+
 .traducao {
     display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.linha {
+    display: flex;
     flex-direction: row;
-    gap: 20px;
-    margin: 30px 0 0 4%;
+    gap: 40px;
+    justify-content: flex-start;
 }
-.traducao > div { /* Limitando o tamanho de cada aba */
-    width: 50%;
-    box-sizing: border-box;
+
+.linha .coluna {
+    flex: 1 1 0;
+    text-align: left;
 }
+
+.linha h5 {
+    text-align: justify;
+    margin-bottom: 4px;
+    font-size: 16px;
+}
+
 .acesso { /* Acesso da bibliografia */
     text-align: justify; /* Centralizando o texto */
     color: #000000 !important; /* Cor do texto */
@@ -621,6 +636,14 @@ img {
     align-items: center;
     gap: 10px;
 }
+.Reportagem > h3 {
+    width: 50%;
+    box-sizing: border-box;
+}
+.Perguntas > h5 {
+    width: 50%;
+    box-sizing: border-box;
+}
 #Reportagem_Elizabete_Tenreiro {
     display: block;
     text-align: left;
@@ -656,14 +679,14 @@ img {
 .foto_centralizada {
     display: block;
     width: 45%;
-    height: 300px;
+    height: 45%;
     padding-top: 30px;
     margin: auto;
 }
 .foto_descentralizada {
     display: block;
     width: 45%;
-    height: 40%;
+    height: 300px;
     padding-top: 30px;
     margin: auto;
 }
