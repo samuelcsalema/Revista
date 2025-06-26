@@ -690,6 +690,13 @@ img {
     padding-top: 30px;
     margin: auto;
 }
+.simbolo_letras {
+    display: block;
+    width: 40%;
+    height: 40%;
+    padding-top: 30px;
+    margin: auto;
+}
 .foto_autores {
     display: block;
     width: 45%;
