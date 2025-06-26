@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/subscription.css">
+    <title> Subscription </title>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1 class="nome_pagina"> Assine um plano </h1>
+            
+            <h2 class="aviso"> Esse site NÃO é conectado a nenhum servidor externo, <br> portanto os dados fornecidos aqui, como os do cartão, <br> serão salvos APENAS no seu navegador, contudo é de <br> suma importância tomar cuidado com seus dados <br> é preferível adicionar dados falsos de cartão NESTE site <br> para garantir a sua segurança </h2>
+
+            <nav>
+                <li class="cartoes"> Cartão </li>
+                <li class="nubank"> Nubank </li>
+                <li class="picpay"> PicPay </li>
+                <li class="pix"> Pix </li>
+                <li class="mercadopago"> Mercado Pago </li>
+            </nav>
+
+
+            <section class="cartao">
+                <div class="imagens">
+                </div>
+                <div class="numero_cartao">
+                    <label id="label_n_cartao" for="n_cartao"> Número do Cartão </label>
+                    <input type="number" id="n_cartao" placeholder="" required>
+                </div>
+                <div class="validade">
+                    <label id="label_data_validade" for="data_validade"> Data de Validade </label>
+                    <input type="month" id="data_validade" placeholder="" required>
+                </div>
+                <div class="codigo_validacao">
+                    <label id="label_codigo_validacao" for="codigo_validacao"> CVC / CVV </label>
+                    <input type="text" id="codigo_validacao" placeholder="" required>
+                </div>
+                <div class="nome_titular">
+                    <label id="label_nome_titular" for="nome_titular"> Nome do titular do Cartão </label>
+                    <input type="text" id="nome_titular" placeholder="" required>
+                </div>
+            </section>
+            <section class="section_nubank">
+                <div class="imagens">
+                </div>
+                <div class="numero_cpf">
+                    <label id="label_numero_cpf" for="numero_cpf"> CPF do Titular da NuConta </label>
+                    <input type="number" id="numero_cpf" placeholder="" required>
+                </div>
+                <div class="infos_nu">
+                    <div class="info_com_numero">
+                        <h2 class="numero"> 1 </h2> <p class="passo"> A compra será finalizada no app da Nubank. </p>
+                    </div>
+                    <div class="info_com_numero">
+                        <h2 class="numero"> 2 </h2> <p class="passo"> Não precisa preencher os dados do seu cartão. </p>
+                    </div>
+                    <div class="info_com_numero">
+                        <h2 class="numero"> 3 </h2> <p class="passo"> Pode confiar, é seguro. Sua compra é protegida pelas nossas <br> medidas de segurança </p>
+                    </div>
+                    <p class="passo"> Para usar essa forma de pagamento você precisa ser cliente do Nubank <br> e ter limite de crédito ou saldo disponível na conta </p>
+                </div>
+            </section>
+
+
+            <!-- <div class="input_usuario">
+                <label id="label_usuario" for="usuario"> Usuário </label>
+                <input type="text" id="usuario" placeholder="" required>
+            </div>
+
+            <div class="input_senha">
+                <label id="label_senha" for="senha"> Senha </label>
+                <input type="password" id="senha" placeholder="" required>
+            </div> -->
+            
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="../js/subscription.js"> </script>
+</body>
+</html>
