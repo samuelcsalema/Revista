@@ -150,7 +150,7 @@ button { /* Configurando o botão */
     font-weight: bold; /* Deixando o texto em negrito */
     font-size: 12pt; /* Tamanho do texto */
     margin-top: 20px; /* Espaçamento entre o botão e a barra de escrever */
-    border-radius: 4px; /* Arredondando o botão */
+    border-radius: 10px; /* Arredondando o botão */
     cursor: pointer; /* Fazendo com que o mouse mude quando passa em cima do botão */
     outline: none; /* Retirando o contorno do botão */
     transition: all .5 ease; /* Fazendo com que fique mais claro quando clica */

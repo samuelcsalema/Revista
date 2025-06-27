@@ -626,7 +626,8 @@ img {
     display: block;
     width: 60%;
     height: 60%;
-    margin: 30px 0 0 80px;
+    padding-top: 30px;
+    margin: auto;
 }
 #Imagem_Reportagem_Noticia {
     display: block;
@@ -734,4 +735,11 @@ img {
     justify-content: center;
     padding-top: 10px;
     display: flex;
+}
+.aviso {
+    color: #ad0000 !important;
+    text-align: center;
+    font-weight: bold;
+    font-size: 13pt;
+    margin: 20px;
 }

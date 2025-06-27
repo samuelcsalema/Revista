@@ -39,10 +39,10 @@ function entrar(){
     let listaUser = [] // Cria a lista de usuários registrados
     // Lista de usuários registrados
     let uservalid = { // Cria as categorias de usuário válido
-        nome: null,
-        usuario: null,
-        senha: null,
-        plano: null
+        nome: "Batman",
+        usuario: "Letras",
+        senha: "1234",
+        plano: "Pro"
     }
     // Criando o armazenamento
     listaUser = JSON.parse(localStorage.getItem('listaUser'))

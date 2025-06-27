@@ -48,9 +48,87 @@ body { /* Detalhes gerais */
 }
 .Formas > div {
     border-radius: 10px 10px 10px ;
-    background-color: #426bc2;
-    text-align: center;
-    margin: 10px;
-    height: 50px;
+    background-color: #cee0f7;
+    justify-content: left;
+    line-height: 50px;
     cursor: pointer;
+    padding-left: 40px;
+    display: flex;
+    margin: 10px;
+}
+
+.categorias {
+    display: flex;
+    margin: 5px;
+}
+.categorias input { /* Estrutura para digitar */
+    width: 100%; /* Largura da barra de escrever */
+    padding: 5px 5px; /* Tamanho da linha de escrever */
+    display: inline-block; /* Faz com que fique em linha */
+    border: 0; /* Retirando a borda */
+    border-bottom: 2px solid #0b1957; /* Cor da linha de escrever */
+    background-color: transparent; /* Cor de fundo da linha de escrever */
+    outline: none; /* Retirando o contorno */
+    min-width: 330px; /* Largura mínima da linha de escrever */
+    font-size: 16px; /* Tamanho da fonte */
+    transition: all .3s ease; /* Velocidade que configura */
+    border-radius: 5px; /* Arredondando o fundo */
+}
+.categorias { /* Texto de requisitos */
+    position: relative; /* Fazendo com que fique em linha */
+    padding-top: 13px; /* Espaçamento entre o texto e a barra de escrever */
+    margin-top: 5%; /* Espaçamento entre o título e a barra de escrever */
+    margin-bottom: 5%; /* Espaçamento entre a barra de escrever e o botão */
+}
+.categorias input:focus{ /* Linha de baixo */
+    border-bottom: 2px solid #0b1957; /* Cor da linha de escrever ao clicar */
+}
+.categorias label { /* Texto dos requisitos */
+    color: #0b1957; /* Cor do texto */
+    pointer-events: none; /* Faz com que não clique no texto */
+    position: absolute; /* Fazendo com que fique em linha */
+    top: 0; /* Espaçamento entre o texto e a barra de escrever */
+    left: 0; /* Espaçamento entre o texto e a barra de escrever */
+    margin-top: 13px; /* Espaçamento entre o texto e a barra de escrever */
+    transition: all .5s ease; /* Velocidade que configura */
+}
+.categorias input:focus + label,
+.categorias input:valid + label { /* Especificações do Requisitos ao clicar */
+    font-size: 13px; /* Tamanho do texto */
+    margin-top: 0; /* Espaçamento entre o texto e a barra de escrever */
+    color: solid #0b1957; /* Cor do texto */
+}
+.categorias input:focus + label,
+.categorias input:not(:placeholder-shown) + label {
+    top: -10px; /* Espaçamento entre o texto e a barra de escrever */
+    font-size: 12px; /* Tamanho do texto */
+    color: solid #0b1957; /* Cor do texto */
+}
+
+.numero {
+    background-color: #0b1957;
+    flex-direction: column;
+    border-radius: 100%;
+    line-height: 20px;
+    color: #e9f3ff;
+    margin-right: 10px;
+    font-size: small;
+    height: 20px;
+    width: 20px;
+}
+.passo {
+    line-height: 18px;
+    text-align: left;
+    font-size: 15px;
+}
+
+button {
+    background-color: #cee0f7;
+    border-color: #0b1957;
+    border-radius: 10px;
+    font-weight: bold;
+    color: #0b1957;
+    margin-top: 10px;
+    cursor: pointer;
+    padding: 10px;
 }
