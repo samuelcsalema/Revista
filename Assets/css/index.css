@@ -599,6 +599,11 @@ iframe { /* Vídeos */
     display: flex; /* Fazendo com que fique em linha */
     margin: auto; /* Centralizando a caixa */
 }
+video { /* Vídeos */
+    padding: 20px;
+    display: flex; /* Fazendo com que fique em linha */
+    margin: auto; /* Centralizando a caixa */
+}
 img {
     display: block;
     width: 50%;
