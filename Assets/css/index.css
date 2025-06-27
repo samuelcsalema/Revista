@@ -730,3 +730,8 @@ img {
     margin: auto;
     padding: 20px 0;
 }
+.link_livro {
+    justify-content: center;
+    padding-top: 10px;
+    display: flex;
+}
