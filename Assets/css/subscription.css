@@ -1,0 +1,56 @@
+/* =========================
+   Zerando a definição básica de tudo
+   ========================= */
+
+* { /* Definição importante */
+    margin: 0; /* Tirando margens */
+    padding: 0; /* Espaço 0 */
+    text-align: center; /* Alinhando o texto ao centro*/
+}
+html, body { /* Definição importante */
+    margin: 0; /* Tirando margens */
+    padding: 0; /* Espaço 0 */
+    background-color: #08264d; /* Definindo a cor de fundo */
+}
+body { /* Detalhes gerais */
+    margin: 5% 0;
+}
+
+.aviso {
+    font-size: 17px;
+    color: #c50000;
+    margin-top: auto;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+}
+.card {
+    background-color: #e9f3ff;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    border-radius: 10%;
+    padding: 30px;
+    box-shadow: 3px 3px 1px 0px #00000050;
+    height: 100%;
+}
+
+.Formas_de_pagamento {
+    list-style: none;
+    margin: 30px;
+}
+.Formas {
+    list-style: none;
+}
+.Formas > div {
+    border-radius: 10px 10px 10px ;
+    background-color: #426bc2;
+    text-align: center;
+    margin: 10px;
+    height: 50px;
+    cursor: pointer;
+}

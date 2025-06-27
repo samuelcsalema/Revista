@@ -1,6 +1,6 @@
 let userLogado = JSON.parse(localStorage.getItem('userLogado'));
 let token = localStorage.getItem('token');
-let msgError = document.querySelector('#msgError'); // Mensagem de erro
+let msgError = document.querySelector('#msgError');
 let censura = document.querySelector('.censura');
 let colunalado = document.querySelector('.coluna-lado');
 let burgao = document.querySelector('.burgao');
@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", () => { // Conecta o id do nav com
         "btn-caderno9": "caderno9",
         "btn-caderno10": "caderno10",
         "btn-caderno11": "caderno11",
+        "btn-caderno12": "caderno12",
         "btn-sobre": "sobre",
         "btn-contato": "contato"
     };
@@ -42,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => { // Conecta o id do nav com
     });
     // Parte específica para pago
         document.getElementById("btn-pago").addEventListener("click", (event) => {
-        event.preventDefault();
+            event.preventDefault();
         if (permisao == true) {
             msgError.classList.add('hidden'); 
             menu();
@@ -57,6 +58,13 @@ document.addEventListener("DOMContentLoaded", () => { // Conecta o id do nav com
     showSection("home");
 });
 
+function showSection(sectionId) {
+    document.querySelectorAll('#main-content > section').forEach(sec => {
+        sec.style.display = 'none';
+    });
+    const section = document.getElementById(sectionId);
+    if (section) section.style.display = 'block';
+}
 
 document.getElementById("id-censura").addEventListener("click", () => {
     censura.classList.add('hidden');
@@ -80,13 +88,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-function showSection(sectionId) {
-    document.querySelectorAll('#main-content > section').forEach(sec => {
-        sec.style.display = 'none';
-    });
-    const section = document.getElementById(sectionId);
-    if (section) section.style.display = 'block';
-}
 
 function hideError() {
     msgError.classList.add('hidden');
