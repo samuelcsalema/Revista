@@ -129,6 +129,10 @@ html, body { /* Definição importante */
     .separacao {
         text-align: justify !important
     }
+    .contato_img {
+        width: 350px !important;
+        height: 350px !important;
+    }
 }
 
 /* =========================
@@ -742,4 +746,12 @@ img {
     font-weight: bold;
     font-size: 13pt;
     margin: 20px;
+}
+.contato_img {
+    display: block;
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    border-radius: 50%;
+    object-fit: cover;
 }

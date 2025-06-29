@@ -151,7 +151,7 @@ document.addEventListener('touchend', function(event) {
 }, false);
 
 function arrastado() {
-    if (touchEndX - touchStartX > 60) {
+    if (touchEndX - touchStartX > 100) {
         censura.classList.remove('hidden');
         colunalado.classList.add('active');
         burgao.classList.toggle('fixed');
