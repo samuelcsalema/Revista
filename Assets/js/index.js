@@ -38,6 +38,15 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
+function getNextSectionId(currentId) {
+    const sections = Array.from(document.querySelectorAll('#main-content > section'));
+    const idx = sections.findIndex(sec => sec.id === currentId);
+    if (idx !== -1 && idx < sections.length - 1) {
+        return sections[idx + 1].id;
+    }
+    return null;
+}
+
 document.addEventListener("DOMContentLoaded", () => { // Conecta o id do nav com o id da main
     const navMap = {
 //          Button       Section         
@@ -81,6 +90,7 @@ document.addEventListener("DOMContentLoaded", () => { // Conecta o id do nav com
     });
     // Define a home como padrão
     showSection("home");
+    autoplayAudiosInSection("home");
 });
 
 function autoplayAudiosInSection(sectionId) {
@@ -100,10 +110,18 @@ function autoplayAudiosInSection(sectionId) {
 
     // Aciona o próximo áudio automaticamente
     function playNextAudio(index) {
-        if (index >= audios.length) return;
+        if (index >= audios.length) {
+            // Se for o último áudio, troca de caderno
+            const nextSectionId = getNextSectionId(sectionId);
+            if (nextSectionId) {
+            setTimeout(() => {
+                showSection(nextSectionId);
+            }, 3000);
+        }}
         audios[index].play();
         audios[index].onended = () => playNextAudio(index + 1);
     }
+
     playNextAudio(0);
 }
 

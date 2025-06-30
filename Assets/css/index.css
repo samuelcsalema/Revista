@@ -120,6 +120,9 @@ html, body { /* Definição importante */
     iframe {
         width: 80% !important;
     }
+    audio {
+        width: 100% !important;
+    }
     #Imagem_Reportagem_Noticia {
     width: 100% !important;
     }
@@ -620,6 +623,7 @@ address {
 audio { /* Audios */
     display: flex; /* Fazendo com que fique em linha */
     margin: auto; /* Centralizando a caixa */
+    width: 70%; /* Largura do áudio */
 }
 iframe { /* Vídeos */
     padding: 20px;
