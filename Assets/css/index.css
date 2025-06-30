@@ -272,6 +272,20 @@ header { /* Nome do site */
     outline: none;
     transition: all .5 ease-out;
 }
+#desativar-autoplay {
+    z-index: 1100; /* Sobrepondo a censura */
+    background-color: #cee0f7; /* Cor de fundo do botão */
+    border-color: #08264d; /* Cor da borda do botão */
+    color: #000000; /* Cor do texto do botão */
+    padding: 7px; /* Tamanho do botão */
+    font-weight: bold; /* Deixando o texto em negrito */
+    font-size: 8pt; /* Tamanho do texto */
+    border-radius: 8px; /* Arredondando o botão */
+    cursor: pointer; /* Fazendo com que o mouse mude quando passa em cima do botão */
+    outline: none; /* Retirando o contorno do botão */
+    transition: all .5 ease-out; /* Fazendo com que fique mais claro quando clica */
+    margin-bottom: 10px;
+}
 .btn-search{ /* Botão de pesquisa */
     background-color: #cee0f7;
     border-color: #08264d;
@@ -286,8 +300,8 @@ header { /* Nome do site */
     
 }
 button:hover { /* Quando o cursor passa por cima*/
-    background-color: #08264d; /* Cor de fundo do botão ao clicar */
-    color: #ffffff; /* Cor do texto do botão ao clicar */
+    background-color: #08264d !important; /* Cor de fundo do botão ao clicar */
+    color: #ffffff !important; /* Cor do texto do botão ao clicar */
 }
 
 /* =========================

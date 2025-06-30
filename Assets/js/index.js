@@ -5,6 +5,7 @@ let censura = document.querySelector('.censura');
 let colunalado = document.querySelector('.coluna-lado');
 let burgao = document.querySelector('.burgao');
 let btnlogin = document.getElementById("btnlogin");
+let autoplayEnabled = true;
 let permisao = false;
 let touchStartX = 0;
 let touchEndX = 0;
@@ -26,6 +27,16 @@ showSection = function(sectionId) {
     originalshowSection(sectionId);
     autoplayAudiosInSection(sectionId);
 };
+
+document.addEventListener("DOMContentLoaded", () => {
+    const btn = document.getElementById("desativar-autoplay");
+    if (btn) {
+        btn.addEventListener("click", function() {
+            autoplayEnabled = !autoplayEnabled;
+            btn.textContent = autoplayEnabled ? "Desativar Leitura Automática" : "Ativar Leitura Automática";
+        });
+    }
+});
 
 document.addEventListener("DOMContentLoaded", () => { // Conecta o id do nav com o id da main
     const navMap = {
@@ -73,6 +84,8 @@ document.addEventListener("DOMContentLoaded", () => { // Conecta o id do nav com
 });
 
 function autoplayAudiosInSection(sectionId) {
+    // Desativando o autoplay
+    if (!autoplayEnabled) return;
     // Pause todos os áudios
     document.querySelectorAll('audio').forEach(audio => {
         audio.pause();
@@ -192,12 +205,16 @@ document.getElementById("id-censura").addEventListener("click", () => {
     burgao.classList.remove('fixed');
 });
 
-document.querySelectorAll('audio').forEach(audio => {
-    audio.addEventListener('play', function() {
-        document.querySelectorAll('audio').forEach(otherAudio => {
-            if (otherAudio !== audio) {
-                otherAudio.pause();
-            }
-        });
+function showSection(sectionId) {
+    // Pausa quando muda de Section
+    document.querySelectorAll('audio').forEach(audio => {
+        audio.pause();
+        audio.currentTime = 0;
     });
-});
+
+    document.querySelectorAll('#main-content > section').forEach(sec => {
+        sec.style.display = 'none';
+    });
+    const section = document.getElementById(sectionId);
+    if (section) section.style.display = 'block';
+}
