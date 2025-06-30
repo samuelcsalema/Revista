@@ -689,7 +689,7 @@ img {
 .foto_centralizada {
     display: block;
     width: 45%;
-    height: 45%;
+    height: 300px;
     padding-top: 30px;
     margin: auto;
 }
