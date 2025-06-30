@@ -133,6 +133,10 @@ html, body { /* Definição importante */
         width: 350px !important;
         height: 350px !important;
     }
+    #desativar-autoplay {
+        margin-top: 10px;
+        position: static !important;
+    }
 }
 
 /* =========================
@@ -274,6 +278,7 @@ header { /* Nome do site */
 }
 #desativar-autoplay {
     z-index: 1100; /* Sobrepondo a censura */
+    position: relative;
     background-color: #cee0f7; /* Cor de fundo do botão */
     border-color: #08264d; /* Cor da borda do botão */
     color: #000000; /* Cor do texto do botão */
