@@ -137,6 +137,10 @@ html, body { /* Definição importante */
         margin-top: 10px;
         position: static !important;
     }
+    .foto_centralizada {
+        height: 70% !important;
+        width: 70% !important;
+    }
 }
 
 /* =========================
