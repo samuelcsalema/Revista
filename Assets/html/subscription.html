@@ -17,30 +17,30 @@
                     <section class="section_cartao" style="display:none">
                         <div class="imagens">
                         </div>
-                        <div class="categorias" id="numero_cartao">
-                            <label id="label_n_cartao" for="n_cartao"> Número do Cartão </label>
+                        <div class="categorias">
                             <input type="text" id="n_cartao" placeholder="xxxx xxxx xxxx xxxx" required maxlength="19" inputmode="numeric" pattern="[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}">
+                            <label id="label_n_cartao" for="n_cartao"> Número do Cartão </label>
                         </div>
-                        <div class="categorias" id="validade">
-                            <label id="label_data_validade" for="data_validade"> Data de Validade </label>
+                        <div class="categorias">
                             <input type="month" id="data_validade" placeholder="" required>
+                            <label id="label_data_validade" for="data_validade"> Data de Validade </label>
                         </div>
-                        <div class="categorias" id="codigo_validacao">
-                            <label id="label_codigo_validacao" for="codigo_validacao"> CVC / CVV </label>
+                        <div class="categorias">
                             <input type="text" id="codigo_validacao" placeholder="123" required maxlength="3" inputmode="numeric">
+                            <label id="label_codigo_validacao" for="codigo_validacao"> CVC / CVV </label>
                         </div>
-                        <div class="categorias" id="nome_titular">
-                            <label id="label_nome_titular" for="nome_titular"> Nome do titular do Cartão </label>
+                        <div class="categorias">
                             <input type="text" id="nome_titular" placeholder="" required>
+                            <label id="label_nome_titular" for="nome_titular"> Nome do titular do Cartão </label>
                         </div>
                     </section>
                     <div id="btn-nubank"> Nubank </div>
                     <section class="section_nubank" style="display:none">
                         <div class="imagens">
                         </div>
-                        <div class="categorias" id="numero_cpf">
-                            <label id="label_numero_cpf" for="numero_cpf"> CPF do Titular da NuConta </label>
+                        <div class="categorias">
                             <input type="text" id="numero_cpf" placeholder="" required maxlength="11" inputmode="numeric">
+                            <label id="label_numero_cpf" for="numero_cpf"> CPF do Titular da NuConta </label>
                         </div>
                         <div class="infos_nu">
                             <div class="categorias">
@@ -55,17 +55,20 @@
                             <p class="passo"> Para usar essa forma de pagamento você precisa ser cliente do Nubank <br> e ter limite de crédito ou saldo disponível na conta </p>
                         </div>
                     </section>
-                    <div id="btn-picpay"> PicPay </div>
-                    <section class="section_picpay" style="display:none">
-                        <p> Você está no PicPay</p>
-                    </section>
-                    <div id="btn-pix"> Pix </div>
-                    <section class="section_pix" style="display:none">
-                        <p> Você está no Pix</p>
-                    </section>
                     <div id="btn-mercadopago"> Mercado Pago </div>
                     <section class="section_mercadopago" style="display:none">
-                        <p> Você está no Mercado Pago</p>
+                        <div class="categorias">
+                            <input type="text" id="nome_completo">
+                            <label id="label_nome_completo" for="nome_completo"> Nome Completo </label>
+                        </div>
+                        <div class="categorias">
+                            <input type="text" id="numero_cpf_mp" placeholder="" required maxlength="11" inputmode="numeric">
+                            <label id="label_numero_cpf_mp" for="numero_cpf_mp"> CPF </label>
+                        </div>
+                        <div class="categorias">
+                            <input type="text" id="numero_telefone" placeholder="(31) 9XXXX-XXXX" required maxlength="14" inputmode="numeric">
+                            <label id="label_numero_telefone" for="numero_telefone"> Telefone </label>
+                        </div>
                     </section>
                 </div>
                 <div class="central">

@@ -131,23 +131,6 @@ document.getElementById("id-censura").addEventListener("click", () => {
     burgao.classList.remove('fixed');
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-    document.getElementById("btn-search").addEventListener("click", function() {
-        const searchTerm = document.getElementById("searchInput").value.trim();
-        if (searchTerm) {
-            alert("Trabalhando nisso, mas você pesquisou por: " + searchTerm);
-            // Aqui você pode chamar sua função de busca real
-        }
-    });
-    // Enter para pesquisar
-    document.getElementById("searchInput").addEventListener("keydown", function(event) {
-        if (event.key === "Enter") {
-            document.getElementById("btn-search").click();
-        }
-    });
-});
-
-
 function hideError() {
     msgError.classList.add('hidden');
 }
@@ -236,3 +219,42 @@ function showSection(sectionId) {
     const section = document.getElementById(sectionId);
     if (section) section.style.display = 'block';
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("btn-search").addEventListener("click", function() {
+        const searchTerm = document.getElementById("searchInput").value.trim().toLowerCase();
+        if (!searchTerm) return;
+
+        // Remove previous highlights
+        document.querySelectorAll('.highlight-search').forEach(el => {
+            el.outerHTML = el.innerText;
+        });
+
+        let found = false;
+        // Pesquisa na Section visível
+        document.querySelectorAll('#main-content > section').forEach(section => {
+            if (section.style.display !== "none") {
+                section.querySelectorAll("p, h2, h3, h4, h5, h6").forEach(el => {
+                    const text = el.innerHTML;
+                    // Marca a palavra procurada
+                    const regex = new RegExp(`(${searchTerm})`, 'gi');
+                    if (regex.test(text)) {
+                        found = true;
+                        el.innerHTML = text.replace(regex, `<span class="highlight-search" style="background:yellow">$1</span>`);
+                    }
+                });
+            }
+        });
+
+        if (!found) {
+            alert("Nenhum resultado encontrado.");
+        }
+    });
+
+    // Enter para pesquisar
+    document.getElementById("searchInput").addEventListener("keydown", function(event) {
+        if (event.key === "Enter") {
+            document.getElementById("btn-search").click();
+        }
+    });
+});
