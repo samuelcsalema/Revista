@@ -13,6 +13,20 @@ if (userLogado && (userLogado.plano === "Basico" || userLogado.plano === "Pro"))
     permisao = true;
 }
 
+function showSection(sectionId) {
+    document.querySelectorAll('#main-content > section').forEach(sec => {
+        sec.style.display = 'none';
+    });
+    const section = document.getElementById(sectionId);
+    if (section) section.style.display = 'block';
+}
+
+const originalshowSection = showSection;
+showSection = function(sectionId) {
+    originalshowSection(sectionId);
+    autoplayAudiosInSection(sectionId);
+};
+
 document.addEventListener("DOMContentLoaded", () => { // Conecta o id do nav com o id da main
     const navMap = {
 //          Button       Section         
@@ -58,12 +72,26 @@ document.addEventListener("DOMContentLoaded", () => { // Conecta o id do nav com
     showSection("home");
 });
 
-function showSection(sectionId) {
-    document.querySelectorAll('#main-content > section').forEach(sec => {
-        sec.style.display = 'none';
+function autoplayAudiosInSection(sectionId) {
+    // Pause todos os áudios
+    document.querySelectorAll('audio').forEach(audio => {
+        audio.pause();
+        audio.currentTime = 0;
     });
+
+    // Seleciona os áudios da Section visível
     const section = document.getElementById(sectionId);
-    if (section) section.style.display = 'block';
+    if (!section) return;
+    const audios = Array.from(section.querySelectorAll('audio'));
+    if (audios.length === 0) return;
+
+    // Aciona o próximo áudio automaticamente
+    function playNextAudio(index) {
+        if (index >= audios.length) return;
+        audios[index].play();
+        audios[index].onended = () => playNextAudio(index + 1);
+    }
+    playNextAudio(0);
 }
 
 document.getElementById("id-censura").addEventListener("click", () => {
